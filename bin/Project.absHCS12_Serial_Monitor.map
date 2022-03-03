@@ -1,0 +1,2070 @@
+*** EVALUATION ***
+PROGRAM "C:\Users\josia\OneDrive\Documents\Project\bin\Project.absHCS12_Serial_Monitor.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC12
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.40 Build 10203, Jul 23 2010
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+Start12.c.o                             Model: SMALL,         Lang: ANSI-C
+STDLIB.C.o (ansis.lib)                  Model: SMALL,         Lang: ANSI-C
+Cpu.c.o                                 Model: SMALL,         Lang: ANSI-C
+IO_Map.c.o                              Model: SMALL,         Lang: ANSI-C
+Vectors.c.o                             Model: SMALL,         Lang: ANSI-C
+Events.c.o                              Model: SMALL,         Lang: ANSI-C
+Project.c.o                             Model: SMALL,         Lang: ANSI-C
+MotorR_EN.c.o                           Model: SMALL,         Lang: ANSI-C
+MotorL_EN.c.o                           Model: SMALL,         Lang: ANSI-C
+MotorRDrive_LCD_DB.c.o                  Model: SMALL,         Lang: ANSI-C
+MotorLDrive_1.c.o                       Model: SMALL,         Lang: ANSI-C
+MotorLDrive_2.c.o                       Model: SMALL,         Lang: ANSI-C
+MotorLDrive_4.c.o                       Model: SMALL,         Lang: ANSI-C
+MotorLDrive_8.c.o                       Model: SMALL,         Lang: ANSI-C
+Sensor.c.o                              Model: SMALL,         Lang: ANSI-C
+MotorL_DutyTimer.c.o                    Model: SMALL,         Lang: ANSI-C
+MotorR_DutyTimer.c.o                    Model: SMALL,         Lang: ANSI-C
+MotorL_DriveTimer.c.o                   Model: SMALL,         Lang: ANSI-C
+MotorR_DriveTimer.c.o                   Model: SMALL,         Lang: ANSI-C
+PID.c.o                                 Model: SMALL,         Lang: ANSI-C
+LCD_RS.c.o                              Model: SMALL,         Lang: ANSI-C
+LCD_EN.c.o                              Model: SMALL,         Lang: ANSI-C
+PE_Timer.c.o                            Model: SMALL,         Lang: ANSI-C
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xC010 (_EntryPoint)
+_startupData is allocated at 0xC03B and uses 6 Bytes
+extern struct _tagStartup {
+  unsigned nofZeroOut     1
+  _Range   pZeroOut       0x3800     835
+  _Copy    *toCopyDownBeg 0xC990
+} _startupData;
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+.init                             59     R     0xC000     0xC03A   ROM_C000
+.startData                        10     R     0xC03B     0xC044   ROM_C000
+NON_BANKED                       115     R     0xC045     0xC0B7   ROM_C000
+.text                           1813     R     0xC0B8     0xC7CC   ROM_C000
+.copy                            421     R     0xC990     0xCB34   ROM_C000
+.data                            796   R/W     0x3800     0x3B1B   RAM
+.abs_section_0                     1   N/I        0x0        0x0   .absSeg0
+.abs_section_1                     1   N/I        0x1        0x1   .absSeg1
+.abs_section_2                     1   N/I        0x2        0x2   .absSeg2
+.abs_section_3                     1   N/I        0x3        0x3   .absSeg3
+.abs_section_8                     1   N/I        0x8        0x8   .absSeg4
+.abs_section_9                     1   N/I        0x9        0x9   .absSeg5
+.abs_section_a                     1   N/I        0xA        0xA   .absSeg6
+.abs_section_b                     1   N/I        0xB        0xB   .absSeg7
+.abs_section_c                     1   N/I        0xC        0xC   .absSeg8
+.abs_section_d                     1   N/I        0xD        0xD   .absSeg9
+.abs_section_e                     1   N/I        0xE        0xE   .absSeg10
+.abs_section_10                    1   N/I       0x10       0x10   .absSeg11
+.abs_section_11                    1   N/I       0x11       0x11   .absSeg12
+.abs_section_13                    1   N/I       0x13       0x13   .absSeg13
+.abs_section_15                    1   N/I       0x15       0x15   .absSeg14
+.abs_section_16                    1   N/I       0x16       0x16   .absSeg15
+.abs_section_19                    1   N/I       0x19       0x19   .absSeg16
+.abs_section_1c                    1   N/I       0x1C       0x1C   .absSeg17
+.abs_section_1d                    1   N/I       0x1D       0x1D   .absSeg18
+.abs_section_1e                    1   N/I       0x1E       0x1E   .absSeg19
+.abs_section_1f                    1   N/I       0x1F       0x1F   .absSeg20
+.abs_section_20                    1   N/I       0x20       0x20   .absSeg21
+.abs_section_21                    1   N/I       0x21       0x21   .absSeg22
+.abs_section_24                    1   N/I       0x24       0x24   .absSeg23
+.abs_section_25                    1   N/I       0x25       0x25   .absSeg24
+.abs_section_28                    1   N/I       0x28       0x28   .absSeg25
+.abs_section_29                    1   N/I       0x29       0x29   .absSeg26
+.abs_section_2a                    1   N/I       0x2A       0x2A   .absSeg27
+.abs_section_2d                    1   N/I       0x2D       0x2D   .absSeg28
+.abs_section_30                    1   N/I       0x30       0x30   .absSeg29
+.abs_section_34                    1   N/I       0x34       0x34   .absSeg30
+.abs_section_35                    1   N/I       0x35       0x35   .absSeg31
+.abs_section_37                    1   N/I       0x37       0x37   .absSeg32
+.abs_section_38                    1   N/I       0x38       0x38   .absSeg33
+.abs_section_39                    1   N/I       0x39       0x39   .absSeg34
+.abs_section_3a                    1   N/I       0x3A       0x3A   .absSeg35
+.abs_section_3b                    1   N/I       0x3B       0x3B   .absSeg36
+.abs_section_3c                    1   N/I       0x3C       0x3C   .absSeg37
+.abs_section_3f                    1   N/I       0x3F       0x3F   .absSeg38
+.abs_section_40                    1   N/I       0x40       0x40   .absSeg39
+.abs_section_41                    1   N/I       0x41       0x41   .absSeg40
+.abs_section_42                    1   N/I       0x42       0x42   .absSeg41
+.abs_section_43                    1   N/I       0x43       0x43   .absSeg42
+.abs_section_46                    1   N/I       0x46       0x46   .absSeg43
+.abs_section_47                    1   N/I       0x47       0x47   .absSeg44
+.abs_section_48                    1   N/I       0x48       0x48   .absSeg45
+.abs_section_49                    1   N/I       0x49       0x49   .absSeg46
+.abs_section_4a                    1   N/I       0x4A       0x4A   .absSeg47
+.abs_section_4b                    1   N/I       0x4B       0x4B   .absSeg48
+.abs_section_4c                    1   N/I       0x4C       0x4C   .absSeg49
+.abs_section_4d                    1   N/I       0x4D       0x4D   .absSeg50
+.abs_section_4e                    1   N/I       0x4E       0x4E   .absSeg51
+.abs_section_4f                    1   N/I       0x4F       0x4F   .absSeg52
+.abs_section_60                    1   N/I       0x60       0x60   .absSeg53
+.abs_section_61                    1   N/I       0x61       0x61   .absSeg54
+.abs_section_86                    1   N/I       0x86       0x86   .absSeg55
+.abs_section_89                    1   N/I       0x89       0x89   .absSeg56
+.abs_section_8b                    1   N/I       0x8B       0x8B   .absSeg57
+.abs_section_8d                    1   N/I       0x8D       0x8D   .absSeg58
+.abs_section_8f                    1   N/I       0x8F       0x8F   .absSeg59
+.abs_section_ca                    1   N/I       0xCA       0xCA   .absSeg60
+.abs_section_cb                    1   N/I       0xCB       0xCB   .absSeg61
+.abs_section_cc                    1   N/I       0xCC       0xCC   .absSeg62
+.abs_section_cd                    1   N/I       0xCD       0xCD   .absSeg63
+.abs_section_ce                    1   N/I       0xCE       0xCE   .absSeg64
+.abs_section_cf                    1   N/I       0xCF       0xCF   .absSeg65
+.abs_section_d8                    1   N/I       0xD8       0xD8   .absSeg66
+.abs_section_d9                    1   N/I       0xD9       0xD9   .absSeg67
+.abs_section_da                    1   N/I       0xDA       0xDA   .absSeg68
+.abs_section_db                    1   N/I       0xDB       0xDB   .absSeg69
+.abs_section_dd                    1   N/I       0xDD       0xDD   .absSeg70
+.abs_section_e0                    1   N/I       0xE0       0xE0   .absSeg71
+.abs_section_e1                    1   N/I       0xE1       0xE1   .absSeg72
+.abs_section_e2                    1   N/I       0xE2       0xE2   .absSeg73
+.abs_section_e3                    1   N/I       0xE3       0xE3   .absSeg74
+.abs_section_e4                    1   N/I       0xE4       0xE4   .absSeg75
+.abs_section_e5                    1   N/I       0xE5       0xE5   .absSeg76
+.abs_section_e8                    1   N/I       0xE8       0xE8   .absSeg77
+.abs_section_e9                    1   N/I       0xE9       0xE9   .absSeg78
+.abs_section_fe                    1   N/I       0xFE       0xFE   .absSeg79
+.abs_section_100                   1   N/I      0x100      0x100   .absSeg80
+.abs_section_101                   1   N/I      0x101      0x101   .absSeg81
+.abs_section_103                   1   N/I      0x103      0x103   .absSeg82
+.abs_section_104                   1   N/I      0x104      0x104   .absSeg83
+.abs_section_105                   1   N/I      0x105      0x105   .absSeg84
+.abs_section_106                   1   N/I      0x106      0x106   .absSeg85
+.abs_section_140                   1   N/I      0x140      0x140   .absSeg86
+.abs_section_141                   1   N/I      0x141      0x141   .absSeg87
+.abs_section_142                   1   N/I      0x142      0x142   .absSeg88
+.abs_section_143                   1   N/I      0x143      0x143   .absSeg89
+.abs_section_144                   1   N/I      0x144      0x144   .absSeg90
+.abs_section_145                   1   N/I      0x145      0x145   .absSeg91
+.abs_section_146                   1   N/I      0x146      0x146   .absSeg92
+.abs_section_147                   1   N/I      0x147      0x147   .absSeg93
+.abs_section_148                   1   N/I      0x148      0x148   .absSeg94
+.abs_section_149                   1   N/I      0x149      0x149   .absSeg95
+.abs_section_14a                   1   N/I      0x14A      0x14A   .absSeg96
+.abs_section_14b                   1   N/I      0x14B      0x14B   .absSeg97
+.abs_section_14e                   1   N/I      0x14E      0x14E   .absSeg98
+.abs_section_14f                   1   N/I      0x14F      0x14F   .absSeg99
+.abs_section_150                   1   N/I      0x150      0x150   .absSeg100
+.abs_section_151                   1   N/I      0x151      0x151   .absSeg101
+.abs_section_152                   1   N/I      0x152      0x152   .absSeg102
+.abs_section_153                   1   N/I      0x153      0x153   .absSeg103
+.abs_section_154                   1   N/I      0x154      0x154   .absSeg104
+.abs_section_155                   1   N/I      0x155      0x155   .absSeg105
+.abs_section_156                   1   N/I      0x156      0x156   .absSeg106
+.abs_section_157                   1   N/I      0x157      0x157   .absSeg107
+.abs_section_158                   1   N/I      0x158      0x158   .absSeg108
+.abs_section_159                   1   N/I      0x159      0x159   .absSeg109
+.abs_section_15a                   1   N/I      0x15A      0x15A   .absSeg110
+.abs_section_15b                   1   N/I      0x15B      0x15B   .absSeg111
+.abs_section_15c                   1   N/I      0x15C      0x15C   .absSeg112
+.abs_section_15d                   1   N/I      0x15D      0x15D   .absSeg113
+.abs_section_15e                   1   N/I      0x15E      0x15E   .absSeg114
+.abs_section_15f                   1   N/I      0x15F      0x15F   .absSeg115
+.abs_section_160                   1   N/I      0x160      0x160   .absSeg116
+.abs_section_161                   1   N/I      0x161      0x161   .absSeg117
+.abs_section_162                   1   N/I      0x162      0x162   .absSeg118
+.abs_section_163                   1   N/I      0x163      0x163   .absSeg119
+.abs_section_164                   1   N/I      0x164      0x164   .absSeg120
+.abs_section_165                   1   N/I      0x165      0x165   .absSeg121
+.abs_section_166                   1   N/I      0x166      0x166   .absSeg122
+.abs_section_167                   1   N/I      0x167      0x167   .absSeg123
+.abs_section_168                   1   N/I      0x168      0x168   .absSeg124
+.abs_section_169                   1   N/I      0x169      0x169   .absSeg125
+.abs_section_16a                   1   N/I      0x16A      0x16A   .absSeg126
+.abs_section_16b                   1   N/I      0x16B      0x16B   .absSeg127
+.abs_section_16c                   1   N/I      0x16C      0x16C   .absSeg128
+.abs_section_170                   1   N/I      0x170      0x170   .absSeg129
+.abs_section_171                   1   N/I      0x171      0x171   .absSeg130
+.abs_section_172                   1   N/I      0x172      0x172   .absSeg131
+.abs_section_173                   1   N/I      0x173      0x173   .absSeg132
+.abs_section_174                   1   N/I      0x174      0x174   .absSeg133
+.abs_section_175                   1   N/I      0x175      0x175   .absSeg134
+.abs_section_176                   1   N/I      0x176      0x176   .absSeg135
+.abs_section_177                   1   N/I      0x177      0x177   .absSeg136
+.abs_section_178                   1   N/I      0x178      0x178   .absSeg137
+.abs_section_179                   1   N/I      0x179      0x179   .absSeg138
+.abs_section_17a                   1   N/I      0x17A      0x17A   .absSeg139
+.abs_section_17b                   1   N/I      0x17B      0x17B   .absSeg140
+.abs_section_17c                   1   N/I      0x17C      0x17C   .absSeg141
+.abs_section_17d                   1   N/I      0x17D      0x17D   .absSeg142
+.abs_section_240                   1   N/I      0x240      0x240   .absSeg143
+.abs_section_241                   1   N/I      0x241      0x241   .absSeg144
+.abs_section_242                   1   N/I      0x242      0x242   .absSeg145
+.abs_section_243                   1   N/I      0x243      0x243   .absSeg146
+.abs_section_244                   1   N/I      0x244      0x244   .absSeg147
+.abs_section_245                   1   N/I      0x245      0x245   .absSeg148
+.abs_section_247                   1   N/I      0x247      0x247   .absSeg149
+.abs_section_248                   1   N/I      0x248      0x248   .absSeg150
+.abs_section_249                   1   N/I      0x249      0x249   .absSeg151
+.abs_section_24a                   1   N/I      0x24A      0x24A   .absSeg152
+.abs_section_24b                   1   N/I      0x24B      0x24B   .absSeg153
+.abs_section_24c                   1   N/I      0x24C      0x24C   .absSeg154
+.abs_section_24d                   1   N/I      0x24D      0x24D   .absSeg155
+.abs_section_24e                   1   N/I      0x24E      0x24E   .absSeg156
+.abs_section_250                   1   N/I      0x250      0x250   .absSeg157
+.abs_section_251                   1   N/I      0x251      0x251   .absSeg158
+.abs_section_252                   1   N/I      0x252      0x252   .absSeg159
+.abs_section_253                   1   N/I      0x253      0x253   .absSeg160
+.abs_section_254                   1   N/I      0x254      0x254   .absSeg161
+.abs_section_255                   1   N/I      0x255      0x255   .absSeg162
+.abs_section_256                   1   N/I      0x256      0x256   .absSeg163
+.abs_section_258                   1   N/I      0x258      0x258   .absSeg164
+.abs_section_259                   1   N/I      0x259      0x259   .absSeg165
+.abs_section_25a                   1   N/I      0x25A      0x25A   .absSeg166
+.abs_section_25b                   1   N/I      0x25B      0x25B   .absSeg167
+.abs_section_25c                   1   N/I      0x25C      0x25C   .absSeg168
+.abs_section_25d                   1   N/I      0x25D      0x25D   .absSeg169
+.abs_section_25e                   1   N/I      0x25E      0x25E   .absSeg170
+.abs_section_25f                   1   N/I      0x25F      0x25F   .absSeg171
+.abs_section_260                   1   N/I      0x260      0x260   .absSeg172
+.abs_section_261                   1   N/I      0x261      0x261   .absSeg173
+.abs_section_262                   1   N/I      0x262      0x262   .absSeg174
+.abs_section_263                   1   N/I      0x263      0x263   .absSeg175
+.abs_section_264                   1   N/I      0x264      0x264   .absSeg176
+.abs_section_265                   1   N/I      0x265      0x265   .absSeg177
+.abs_section_266                   1   N/I      0x266      0x266   .absSeg178
+.abs_section_267                   1   N/I      0x267      0x267   .absSeg179
+.abs_section_268                   1   N/I      0x268      0x268   .absSeg180
+.abs_section_269                   1   N/I      0x269      0x269   .absSeg181
+.abs_section_26a                   1   N/I      0x26A      0x26A   .absSeg182
+.abs_section_26b                   1   N/I      0x26B      0x26B   .absSeg183
+.abs_section_26c                   1   N/I      0x26C      0x26C   .absSeg184
+.abs_section_26d                   1   N/I      0x26D      0x26D   .absSeg185
+.abs_section_26e                   1   N/I      0x26E      0x26E   .absSeg186
+.abs_section_26f                   1   N/I      0x26F      0x26F   .absSeg187
+.abs_section_270                   1   N/I      0x270      0x270   .absSeg188
+.abs_section_271                   1   N/I      0x271      0x271   .absSeg189
+.abs_section_272                   1   N/I      0x272      0x272   .absSeg190
+.abs_section_273                   1   N/I      0x273      0x273   .absSeg191
+.abs_section_274                   1   N/I      0x274      0x274   .absSeg192
+.abs_section_275                   1   N/I      0x275      0x275   .absSeg193
+.abs_section_1a                    2   N/I       0x1A       0x1B   .absSeg194
+.abs_section_22                    2   N/I       0x22       0x23   .absSeg195
+.abs_section_26                    2   N/I       0x26       0x27   .absSeg196
+.abs_section_2b                    2   N/I       0x2B       0x2C   .absSeg197
+.abs_section_2e                    2   N/I       0x2E       0x2F   .absSeg198
+.abs_section_44                    2   N/I       0x44       0x45   .absSeg199
+.abs_section_50                    2   N/I       0x50       0x51   .absSeg200
+.abs_section_52                    2   N/I       0x52       0x53   .absSeg201
+.abs_section_54                    2   N/I       0x54       0x55   .absSeg202
+.abs_section_56                    2   N/I       0x56       0x57   .absSeg203
+.abs_section_58                    2   N/I       0x58       0x59   .absSeg204
+.abs_section_5a                    2   N/I       0x5A       0x5B   .absSeg205
+.abs_section_5c                    2   N/I       0x5C       0x5D   .absSeg206
+.abs_section_5e                    2   N/I       0x5E       0x5F   .absSeg207
+.abs_section_62                    2   N/I       0x62       0x63   .absSeg208
+.abs_section_82                    2   N/I       0x82       0x83   .absSeg209
+.abs_section_84                    2   N/I       0x84       0x85   .absSeg210
+.abs_section_90                    2   N/I       0x90       0x91   .absSeg211
+.abs_section_92                    2   N/I       0x92       0x93   .absSeg212
+.abs_section_94                    2   N/I       0x94       0x95   .absSeg213
+.abs_section_96                    2   N/I       0x96       0x97   .absSeg214
+.abs_section_98                    2   N/I       0x98       0x99   .absSeg215
+.abs_section_9a                    2   N/I       0x9A       0x9B   .absSeg216
+.abs_section_9c                    2   N/I       0x9C       0x9D   .absSeg217
+.abs_section_9e                    2   N/I       0x9E       0x9F   .absSeg218
+.abs_section_c8                    2   N/I       0xC8       0xC9   .absSeg219
+.abs_section_ec                    2   N/I       0xEC       0xED   .absSeg220
+.abs_section_ee                    2   N/I       0xEE       0xEF   .absSeg221
+.abs_section_f0                    2   N/I       0xF0       0xF1   .absSeg222
+.abs_section_f2                    2   N/I       0xF2       0xF3   .absSeg223
+.abs_section_f4                    2   N/I       0xF4       0xF5   .absSeg224
+.abs_section_f6                    2   N/I       0xF6       0xF7   .absSeg225
+.abs_section_f8                    2   N/I       0xF8       0xF9   .absSeg226
+.abs_section_fa                    2   N/I       0xFA       0xFB   .absSeg227
+.abs_section_fc                    2   N/I       0xFC       0xFD   .absSeg228
+.abs_section_16e                   2   N/I      0x16E      0x16F   .absSeg229
+.abs_section_17e                   2   N/I      0x17E      0x17F   .absSeg230
+.abs_section_ff80                128     R     0xFF80     0xFFFF   .absSeg231
+.bss                              18   R/W     0x3B1C     0x3B2D   RAM
+.common                            9   R/W     0x3B2E     0x3B36   RAM
+MotorR_EN_CODE                    19     R     0xC7CD     0xC7DF   ROM_C000
+MotorL_EN_CODE                    25     R     0xC7E0     0xC7F8   ROM_C000
+MotorRDrive_LCD_DB_CODE           27     R     0xC7F9     0xC813   ROM_C000
+MotorLDrive_1_CODE                21     R     0xC814     0xC828   ROM_C000
+MotorLDrive_2_CODE                21     R     0xC829     0xC83D   ROM_C000
+MotorLDrive_4_CODE                21     R     0xC83E     0xC852   ROM_C000
+MotorLDrive_8_CODE                21     R     0xC853     0xC867   ROM_C000
+Sensor_DATA                        6   R/W     0x3B37     0x3B3C   RAM
+Sensor_CODE                       85     R     0xC868     0xC8BC   ROM_C000
+MotorL_DriveTimer_CODE            85     R     0xC8BD     0xC911   ROM_C000
+MotorR_DriveTimer_CODE            85     R     0xC912     0xC966   ROM_C000
+LCD_RS_CODE                       19     R     0xC967     0xC979   ROM_C000
+LCD_EN_CODE                       19     R     0xC97A     0xC98C   ROM_C000
+Sensor_CONST                       3     R     0xC98D     0xC98F   ROM_C000
+MotorL_DriveTimer_DATA             3   R/W     0x3B3D     0x3B3F   RAM
+MotorR_DriveTimer_DATA             3   R/W     0x3B40     0x3B42   RAM
+.stack                           128   R/W     0x3B43     0x3BC2   RAM
+
+Summary of section sizes per section type:
+READ_ONLY (R):         BB5 (dec:     2997)
+READ_WRITE (R/W):      3C3 (dec:      963)
+NO_INIT (N/I):         10C (dec:      268)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- Start12.c.o --
+- PROCEDURES:
+     Init                                      C0B8      29      41       1   .text       
+     _Startup                                  C0E1      12      18       1   .text       
+- VARIABLES:
+     _startupData                              C03B       6       6       3   .startData  
+- LABELS:
+     __SEG_END_SSTACK                          3BC3       0       0       1               
+MODULE:                 -- STDLIB.C.o (ansis.lib) --
+- PROCEDURES:
+     abs                                       C0F3       A      10       2   .text       
+- VARIABLES:
+MODULE:                 -- Cpu.c.o --
+- PROCEDURES:
+     PE_low_level_init                         C0FD      B7     183       1   .text       
+     Cpu_Interrupt                             C000       2       2      55   .init       
+     Cpu_Delay100US                            C002       E      14      13   .init       
+     _EntryPoint                               C010      2B      43       3   .init       
+- VARIABLES:
+     Shadow_E                                  3B2E       1       1       6   .common     
+     Shadow_T                                  3B2F       1       1       7   .common     
+     Shadow_M                                  3B30       1       1       7   .common     
+     Shadow_A                                  3B31       1       1       3   .common     
+MODULE:                 -- IO_Map.c.o --
+- PROCEDURES:
+- VARIABLES:
+     _PORTA                                       0       1       1       3   .abs_section_0
+     _PORTB                                       1       1       1       0   .abs_section_1
+     _DDRA                                        2       1       1       1   .abs_section_2
+     _DDRB                                        3       1       1       1   .abs_section_3
+     _PORTE                                       8       1       1       5   .abs_section_8
+     _DDRE                                        9       1       1       1   .abs_section_9
+     _PEAR                                        A       1       1       3   .abs_section_a
+     _MODE                                        B       1       1       0   .abs_section_b
+     _PUCR                                        C       1       1       1   .abs_section_c
+     _RDRIV                                       D       1       1       1   .abs_section_d
+     _EBICTL                                      E       1       1       0   .abs_section_e
+     _INITRM                                     10       1       1       1   .abs_section_10
+     _INITRG                                     11       1       1       0   .abs_section_11
+     _MISC                                       13       1       1       1   .abs_section_13
+     _ITCR                                       15       1       1       0   .abs_section_15
+     _ITEST                                      16       1       1       0   .abs_section_16
+     _VREGCTRL                                   19       1       1       1   .abs_section_19
+     _MEMSIZ0                                    1C       1       1       0   .abs_section_1c
+     _MEMSIZ1                                    1D       1       1       0   .abs_section_1d
+     _INTCR                                      1E       1       1       1   .abs_section_1e
+     _HPRIO                                      1F       1       1       0   .abs_section_1f
+     _DBGC1                                      20       1       1       0   .abs_section_20
+     _DBGSC                                      21       1       1       0   .abs_section_21
+     _DBGCNT                                     24       1       1       0   .abs_section_24
+     _DBGCCX                                     25       1       1       0   .abs_section_25
+     _DBGC2                                      28       1       1       0   .abs_section_28
+     _DBGC3                                      29       1       1       0   .abs_section_29
+     _DBGCAX                                     2A       1       1       0   .abs_section_2a
+     _DBGCBX                                     2D       1       1       0   .abs_section_2d
+     _PPAGE                                      30       1       1       0   .abs_section_30
+     _SYNR                                       34       1       1       1   .abs_section_34
+     _REFDV                                      35       1       1       1   .abs_section_35
+     _CRGFLG                                     37       1       1       1   .abs_section_37
+     _CRGINT                                     38       1       1       1   .abs_section_38
+     _CLKSEL                                     39       1       1       2   .abs_section_39
+     _PLLCTL                                     3A       1       1       2   .abs_section_3a
+     _RTICTL                                     3B       1       1       0   .abs_section_3b
+     _COPCTL                                     3C       1       1       1   .abs_section_3c
+     _ARMCOP                                     3F       1       1       0   .abs_section_3f
+     _TIOS                                       40       1       1       1   .abs_section_40
+     _CFORC                                      41       1       1       0   .abs_section_41
+     _OC7M                                       42       1       1       1   .abs_section_42
+     _OC7D                                       43       1       1       0   .abs_section_43
+     _TSCR1                                      46       1       1       2   .abs_section_46
+     _TTOV                                       47       1       1       1   .abs_section_47
+     _TCTL1                                      48       1       1       1   .abs_section_48
+     _TCTL2                                      49       1       1       1   .abs_section_49
+     _TCTL3                                      4A       1       1       0   .abs_section_4a
+     _TCTL4                                      4B       1       1       0   .abs_section_4b
+     _TIE                                        4C       1       1       1   .abs_section_4c
+     _TSCR2                                      4D       1       1       2   .abs_section_4d
+     _TFLG1                                      4E       1       1       6   .abs_section_4e
+     _TFLG2                                      4F       1       1       0   .abs_section_4f
+     _PACTL                                      60       1       1       1   .abs_section_60
+     _PAFLG                                      61       1       1       0   .abs_section_61
+     _ATDSTAT0                                   86       1       1       0   .abs_section_86
+     _ATDTEST1                                   89       1       1       0   .abs_section_89
+     _ATDSTAT1                                   8B       1       1       0   .abs_section_8b
+     _ATDDIEN                                    8D       1       1       1   .abs_section_8d
+     _PORTAD0                                    8F       1       1       0   .abs_section_8f
+     _SCICR1                                     CA       1       1       0   .abs_section_ca
+     _SCICR2                                     CB       1       1       0   .abs_section_cb
+     _SCISR1                                     CC       1       1       0   .abs_section_cc
+     _SCISR2                                     CD       1       1       0   .abs_section_cd
+     _SCIDRH                                     CE       1       1       0   .abs_section_ce
+     _SCIDRL                                     CF       1       1       0   .abs_section_cf
+     _SPICR1                                     D8       1       1       0   .abs_section_d8
+     _SPICR2                                     D9       1       1       0   .abs_section_d9
+     _SPIBR                                      DA       1       1       0   .abs_section_da
+     _SPISR                                      DB       1       1       0   .abs_section_db
+     _SPIDR                                      DD       1       1       0   .abs_section_dd
+     _PWME                                       E0       1       1       0   .abs_section_e0
+     _PWMPOL                                     E1       1       1       0   .abs_section_e1
+     _PWMCLK                                     E2       1       1       0   .abs_section_e2
+     _PWMPRCLK                                   E3       1       1       0   .abs_section_e3
+     _PWMCAE                                     E4       1       1       0   .abs_section_e4
+     _PWMCTL                                     E5       1       1       0   .abs_section_e5
+     _PWMSCLA                                    E8       1       1       0   .abs_section_e8
+     _PWMSCLB                                    E9       1       1       0   .abs_section_e9
+     _PWMSDN                                     FE       1       1       0   .abs_section_fe
+     _FCLKDIV                                   100       1       1       0   .abs_section_100
+     _FSEC                                      101       1       1       0   .abs_section_101
+     _FCNFG                                     103       1       1       0   .abs_section_103
+     _FPROT                                     104       1       1       0   .abs_section_104
+     _FSTAT                                     105       1       1       0   .abs_section_105
+     _FCMD                                      106       1       1       0   .abs_section_106
+     _CANCTL0                                   140       1       1       0   .abs_section_140
+     _CANCTL1                                   141       1       1       0   .abs_section_141
+     _CANBTR0                                   142       1       1       0   .abs_section_142
+     _CANBTR1                                   143       1       1       0   .abs_section_143
+     _CANRFLG                                   144       1       1       0   .abs_section_144
+     _CANRIER                                   145       1       1       0   .abs_section_145
+     _CANTFLG                                   146       1       1       0   .abs_section_146
+     _CANTIER                                   147       1       1       0   .abs_section_147
+     _CANTARQ                                   148       1       1       0   .abs_section_148
+     _CANTAAK                                   149       1       1       0   .abs_section_149
+     _CANTBSEL                                  14A       1       1       0   .abs_section_14a
+     _CANIDAC                                   14B       1       1       0   .abs_section_14b
+     _CANRXERR                                  14E       1       1       0   .abs_section_14e
+     _CANTXERR                                  14F       1       1       0   .abs_section_14f
+     _CANIDAR0                                  150       1       1       0   .abs_section_150
+     _CANIDAR1                                  151       1       1       0   .abs_section_151
+     _CANIDAR2                                  152       1       1       0   .abs_section_152
+     _CANIDAR3                                  153       1       1       0   .abs_section_153
+     _CANIDMR0                                  154       1       1       0   .abs_section_154
+     _CANIDMR1                                  155       1       1       0   .abs_section_155
+     _CANIDMR2                                  156       1       1       0   .abs_section_156
+     _CANIDMR3                                  157       1       1       0   .abs_section_157
+     _CANIDAR4                                  158       1       1       0   .abs_section_158
+     _CANIDAR5                                  159       1       1       0   .abs_section_159
+     _CANIDAR6                                  15A       1       1       0   .abs_section_15a
+     _CANIDAR7                                  15B       1       1       0   .abs_section_15b
+     _CANIDMR4                                  15C       1       1       0   .abs_section_15c
+     _CANIDMR5                                  15D       1       1       0   .abs_section_15d
+     _CANIDMR6                                  15E       1       1       0   .abs_section_15e
+     _CANIDMR7                                  15F       1       1       0   .abs_section_15f
+     _CANRXIDR0                                 160       1       1       0   .abs_section_160
+     _CANRXIDR1                                 161       1       1       0   .abs_section_161
+     _CANRXIDR2                                 162       1       1       0   .abs_section_162
+     _CANRXIDR3                                 163       1       1       0   .abs_section_163
+     _CANRXDSR0                                 164       1       1       0   .abs_section_164
+     _CANRXDSR1                                 165       1       1       0   .abs_section_165
+     _CANRXDSR2                                 166       1       1       0   .abs_section_166
+     _CANRXDSR3                                 167       1       1       0   .abs_section_167
+     _CANRXDSR4                                 168       1       1       0   .abs_section_168
+     _CANRXDSR5                                 169       1       1       0   .abs_section_169
+     _CANRXDSR6                                 16A       1       1       0   .abs_section_16a
+     _CANRXDSR7                                 16B       1       1       0   .abs_section_16b
+     _CANRXDLR                                  16C       1       1       0   .abs_section_16c
+     _CANTXIDR0                                 170       1       1       0   .abs_section_170
+     _CANTXIDR1                                 171       1       1       0   .abs_section_171
+     _CANTXIDR2                                 172       1       1       0   .abs_section_172
+     _CANTXIDR3                                 173       1       1       0   .abs_section_173
+     _CANTXDSR0                                 174       1       1       0   .abs_section_174
+     _CANTXDSR1                                 175       1       1       0   .abs_section_175
+     _CANTXDSR2                                 176       1       1       0   .abs_section_176
+     _CANTXDSR3                                 177       1       1       0   .abs_section_177
+     _CANTXDSR4                                 178       1       1       0   .abs_section_178
+     _CANTXDSR5                                 179       1       1       0   .abs_section_179
+     _CANTXDSR6                                 17A       1       1       0   .abs_section_17a
+     _CANTXDSR7                                 17B       1       1       0   .abs_section_17b
+     _CANTXDLR                                  17C       1       1       0   .abs_section_17c
+     _CANTXTBPR                                 17D       1       1       0   .abs_section_17d
+     _PTT                                       240       1       1       7   .abs_section_240
+     _PTIT                                      241       1       1       0   .abs_section_241
+     _DDRT                                      242       1       1       1   .abs_section_242
+     _RDRT                                      243       1       1       1   .abs_section_243
+     _PERT                                      244       1       1       1   .abs_section_244
+     _PPST                                      245       1       1       0   .abs_section_245
+     _MODRR                                     247       1       1       0   .abs_section_247
+     _PTS                                       248       1       1       0   .abs_section_248
+     _PTIS                                      249       1       1       0   .abs_section_249
+     _DDRS                                      24A       1       1       0   .abs_section_24a
+     _RDRS                                      24B       1       1       1   .abs_section_24b
+     _PERS                                      24C       1       1       1   .abs_section_24c
+     _PPSS                                      24D       1       1       0   .abs_section_24d
+     _WOMS                                      24E       1       1       0   .abs_section_24e
+     _PTM                                       250       1       1       7   .abs_section_250
+     _PTIM                                      251       1       1       0   .abs_section_251
+     _DDRM                                      252       1       1       1   .abs_section_252
+     _RDRM                                      253       1       1       1   .abs_section_253
+     _PERM                                      254       1       1       1   .abs_section_254
+     _PPSM                                      255       1       1       0   .abs_section_255
+     _WOMM                                      256       1       1       1   .abs_section_256
+     _PTP                                       258       1       1       0   .abs_section_258
+     _PTIP                                      259       1       1       0   .abs_section_259
+     _DDRP                                      25A       1       1       0   .abs_section_25a
+     _RDRP                                      25B       1       1       1   .abs_section_25b
+     _PERP                                      25C       1       1       1   .abs_section_25c
+     _PPSP                                      25D       1       1       0   .abs_section_25d
+     _PIEP                                      25E       1       1       0   .abs_section_25e
+     _PIFP                                      25F       1       1       0   .abs_section_25f
+     _PTH                                       260       1       1       0   .abs_section_260
+     _PTIH                                      261       1       1       0   .abs_section_261
+     _DDRH                                      262       1       1       0   .abs_section_262
+     _RDRH                                      263       1       1       0   .abs_section_263
+     _PERH                                      264       1       1       0   .abs_section_264
+     _PPSH                                      265       1       1       0   .abs_section_265
+     _PIEH                                      266       1       1       0   .abs_section_266
+     _PIFH                                      267       1       1       0   .abs_section_267
+     _PTJ                                       268       1       1       0   .abs_section_268
+     _PTIJ                                      269       1       1       0   .abs_section_269
+     _DDRJ                                      26A       1       1       0   .abs_section_26a
+     _RDRJ                                      26B       1       1       0   .abs_section_26b
+     _PERJ                                      26C       1       1       1   .abs_section_26c
+     _PPSJ                                      26D       1       1       0   .abs_section_26d
+     _PIEJ                                      26E       1       1       0   .abs_section_26e
+     _PIFJ                                      26F       1       1       0   .abs_section_26f
+     _PTAD                                      270       1       1       0   .abs_section_270
+     _PTIAD                                     271       1       1       0   .abs_section_271
+     _DDRAD                                     272       1       1       0   .abs_section_272
+     _RDRAD                                     273       1       1       1   .abs_section_273
+     _PERAD                                     274       1       1       0   .abs_section_274
+     _PPSAD                                     275       1       1       0   .abs_section_275
+     _PARTID                                     1A       2       2       0   .abs_section_1a
+     _DBGTB                                      22       2       2       0   .abs_section_22
+     _DBGCC                                      26       2       2       0   .abs_section_26
+     _DBGCA                                      2B       2       2       0   .abs_section_2b
+     _DBGCB                                      2E       2       2       0   .abs_section_2e
+     _TCNT                                       44       2       2       0   .abs_section_44
+     _TC0                                        50       2       2       3   .abs_section_50
+     _TC1                                        52       2       2       3   .abs_section_52
+     _TC2                                        54       2       2       3   .abs_section_54
+     _TC3                                        56       2       2       3   .abs_section_56
+     _TC4                                        58       2       2       3   .abs_section_58
+     _TC5                                        5A       2       2       0   .abs_section_5a
+     _TC6                                        5C       2       2       0   .abs_section_5c
+     _TC7                                        5E       2       2       0   .abs_section_5e
+     _PACNT                                      62       2       2       0   .abs_section_62
+     _ATDCTL23                                   82       2       2       2   .abs_section_82
+     _ATDCTL45                                   84       2       2       3   .abs_section_84
+     _ATDDR0                                     90       2       2       1   .abs_section_90
+     _ATDDR1                                     92       2       2       0   .abs_section_92
+     _ATDDR2                                     94       2       2       0   .abs_section_94
+     _ATDDR3                                     96       2       2       0   .abs_section_96
+     _ATDDR4                                     98       2       2       0   .abs_section_98
+     _ATDDR5                                     9A       2       2       0   .abs_section_9a
+     _ATDDR6                                     9C       2       2       0   .abs_section_9c
+     _ATDDR7                                     9E       2       2       0   .abs_section_9e
+     _SCIBD                                      C8       2       2       0   .abs_section_c8
+     _PWMCNT01                                   EC       2       2       0   .abs_section_ec
+     _PWMCNT23                                   EE       2       2       0   .abs_section_ee
+     _PWMCNT45                                   F0       2       2       0   .abs_section_f0
+     _PWMPER01                                   F2       2       2       0   .abs_section_f2
+     _PWMPER23                                   F4       2       2       0   .abs_section_f4
+     _PWMPER45                                   F6       2       2       0   .abs_section_f6
+     _PWMDTY01                                   F8       2       2       0   .abs_section_f8
+     _PWMDTY23                                   FA       2       2       0   .abs_section_fa
+     _PWMDTY45                                   FC       2       2       0   .abs_section_fc
+     _CANRXTSR                                  16E       2       2       0   .abs_section_16e
+     _CANTXTSR                                  17E       2       2       0   .abs_section_17e
+MODULE:                 -- Vectors.c.o --
+- PROCEDURES:
+- VARIABLES:
+     _InterruptVectorTable                     FF80      80     128       0   .abs_section_ff80
+MODULE:                 -- Events.c.o --
+- PROCEDURES:
+     MotorR_WriteBits                          C1B4       3       3       2   .text       
+     MotorL_WriteBits                          C1B7      2F      47       2   .text       
+     PID_OnInterrupt                           C1E6      87     135       1   .text       
+     MotorR_DriveTimer_OnInterrupt             C26D      32      50       1   .text       
+     MotorL_DriveTimer_OnInterrupt             C29F      32      50       1   .text       
+     MotorR_DutyTimer_OnInterrupt              C2D1      1D      29       1   .text       
+     MotorL_DutyTimer_OnInterrupt              C2EE      1D      29       1   .text       
+     Sensor_OnEnd                              C30B       1       1       1   .text       
+- VARIABLES:
+     toggle1                                   3B1C       2       2       2   .bss        
+     toggle2                                   3B1E       2       2       2   .bss        
+     integral                                  3B20       2       2       5   .bss        
+MODULE:                 -- Project.c.o --
+- PROCEDURES:
+     writeCom                                  C30C      33      51       7   .text       
+     InitializeLCD                             C33F      36      54       1   .text       
+     pollSensors                               C375       B      11       1   .text       
+     powerMotors                               C380      1A      26       8   .text       
+     Forward                                   C39A      1F      31       4   .text       
+     Right                                     C3B9      1D      29       4   .text       
+     Left                                      C3D6      1D      29       4   .text       
+     Turn                                      C3F3      1E      30       4   .text       
+     solveMaze                                 C411     2DB     731      42   .text       
+     main                                      C6EC      49      73       1   .text       
+- VARIABLES:
+     motorSeq                                  3800       8       8       2   .data       
+     heading                                   3808       8       8      20   .data       
+     maze                                      3810     270     624       9   .data       
+     mazeDist                                  3A80      9C     156      10   .data       
+     motorL                                    3B22       2       2       6   .bss        
+     motorR                                    3B24       2       2       6   .bss        
+     stepsL                                    3B26       2       2      12   .bss        
+     stepsR                                    3B28       2       2      12   .bss        
+     mouseX                                    3B2A       2       2       9   .bss        
+     mouseY                                    3B2C       2       2       9   .bss        
+     sensors                                   3B32       3       3       6   .common     
+     place                                     3B35       2       2       7   .common     
+MODULE:                 -- MotorR_EN.c.o --
+- PROCEDURES:
+     MotorR_EN_PutVal                          C7CD      13      19       2   MotorR_EN_CODE
+- VARIABLES:
+MODULE:                 -- MotorL_EN.c.o --
+- PROCEDURES:
+     MotorL_EN_PutVal                          C7E0      19      25       1   MotorL_EN_CODE
+- VARIABLES:
+MODULE:                 -- MotorRDrive_LCD_DB.c.o --
+- PROCEDURES:
+     MotorRDrive_LCD_DB_PutVal                 C7F9      1B      27       3   MotorRDrive_LCD_DB_CODE
+- VARIABLES:
+MODULE:                 -- MotorLDrive_1.c.o --
+- PROCEDURES:
+     MotorLDrive_1_PutVal                      C814      15      21       1   MotorLDrive_1_CODE
+- VARIABLES:
+MODULE:                 -- MotorLDrive_2.c.o --
+- PROCEDURES:
+     MotorLDrive_2_PutVal                      C829      15      21       1   MotorLDrive_2_CODE
+- VARIABLES:
+MODULE:                 -- MotorLDrive_4.c.o --
+- PROCEDURES:
+     MotorLDrive_4_PutVal                      C83E      15      21       1   MotorLDrive_4_CODE
+- VARIABLES:
+MODULE:                 -- MotorLDrive_8.c.o --
+- PROCEDURES:
+     MotorLDrive_8_PutVal                      C853      15      21       1   MotorLDrive_8_CODE
+- VARIABLES:
+MODULE:                 -- Sensor.c.o --
+- PROCEDURES:
+     Sensor_Interrupt                          C045      28      40       1   NON_BANKED  
+     Sensor_Measure                            C868      25      37       1   Sensor_CODE 
+     Sensor_GetValue8                          C88D      1E      30       1   Sensor_CODE 
+     Sensor_Init                               C8AB      12      18       1   Sensor_CODE 
+- VARIABLES:
+     OutFlg                                    3B37       1       1       4   Sensor_DATA 
+     SumChan                                   3B38       1       1       4   Sensor_DATA 
+     ModeFlg                                   3B39       1       1       5   Sensor_DATA 
+     Sensor_OutV                               3B3A       3       3       4   Sensor_DATA 
+     Channels                                  C98D       3       3       1   Sensor_CONST
+MODULE:                 -- MotorL_DutyTimer.c.o --
+- PROCEDURES:
+     MotorL_DutyTimer_Interrupt                C06D       F      15       1   NON_BANKED  
+- VARIABLES:
+MODULE:                 -- MotorR_DutyTimer.c.o --
+- PROCEDURES:
+     MotorR_DutyTimer_Interrupt                C07C       F      15       1   NON_BANKED  
+- VARIABLES:
+MODULE:                 -- MotorL_DriveTimer.c.o --
+- PROCEDURES:
+     MotorL_DriveTimer_Interrupt               C08B       F      15       1   NON_BANKED  
+     MotorL_DriveTimer_SetPeriodUS             C8BD      47      71       1   MotorL_DriveTimer_CODE
+     MotorL_DriveTimer_Init                    C904       E      14       1   MotorL_DriveTimer_CODE
+- VARIABLES:
+     EnUser                                    3B3D       1       1       1   MotorL_DriveTimer_DATA
+     CmpVal                                    3B3E       2       2       3   MotorL_DriveTimer_DATA
+MODULE:                 -- MotorR_DriveTimer.c.o --
+- PROCEDURES:
+     MotorR_DriveTimer_Interrupt               C09A       F      15       1   NON_BANKED  
+     MotorR_DriveTimer_SetPeriodUS             C912      47      71       1   MotorR_DriveTimer_CODE
+     MotorR_DriveTimer_Init                    C959       E      14       1   MotorR_DriveTimer_CODE
+- VARIABLES:
+     EnUser                                    3B40       1       1       1   MotorR_DriveTimer_DATA
+     CmpVal                                    3B41       2       2       3   MotorR_DriveTimer_DATA
+MODULE:                 -- PID.c.o --
+- PROCEDURES:
+     PID_Interrupt                             C0A9       F      15       1   NON_BANKED  
+- VARIABLES:
+MODULE:                 -- LCD_RS.c.o --
+- PROCEDURES:
+     LCD_RS_PutVal                             C967      13      19       1   LCD_RS_CODE 
+- VARIABLES:
+MODULE:                 -- LCD_EN.c.o --
+- PROCEDURES:
+     LCD_EN_PutVal                             C97A      13      19       5   LCD_EN_CODE 
+- VARIABLES:
+MODULE:                 -- PE_Timer.c.o --
+- PROCEDURES:
+     PE_Timer_LngMul                           C735      6C     108       2   .text       
+     PE_Timer_LngHi4                           C7A1      2C      44       2   .text       
+- VARIABLES:
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  Start12.c.o                                  0     59      0
+  STDLIB.C.o (ansis.lib)                       0     10      0
+  Cpu.c.o                                      4    242      0
+  IO_Map.c.o                                 268      0      0
+  Vectors.c.o                                  0      0    128
+  Events.c.o                                   6    344      0
+  Project.c.o                                813   1065      0
+  MotorR_EN.c.o                                0     19      0
+  MotorL_EN.c.o                                0     25      0
+  MotorRDrive_LCD_DB.c.o                       0     27      0
+  MotorLDrive_1.c.o                            0     21      0
+  MotorLDrive_2.c.o                            0     21      0
+  MotorLDrive_4.c.o                            0     21      0
+  MotorLDrive_8.c.o                            0     21      0
+  Sensor.c.o                                   6    125      3
+  MotorL_DutyTimer.c.o                         0     15      0
+  MotorR_DutyTimer.c.o                         0     15      0
+  MotorL_DriveTimer.c.o                        3    100      0
+  MotorR_DriveTimer.c.o                        3    100      0
+  PID.c.o                                      0     15      0
+  LCD_RS.c.o                                   0     19      0
+  LCD_EN.c.o                                   0     19      0
+  PE_Timer.c.o                                 0    152      0
+  other                                      128     10    421
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  Init _Startup abs PE_low_level_init MotorR_WriteBits MotorL_WriteBits 
+  PID_OnInterrupt MotorR_DriveTimer_OnInterrupt MotorL_DriveTimer_OnInterrupt 
+  MotorR_DutyTimer_OnInterrupt MotorL_DutyTimer_OnInterrupt Sensor_OnEnd 
+  writeCom InitializeLCD pollSensors powerMotors Forward Right Left Turn 
+  solveMaze main PE_Timer_LngMul PE_Timer_LngHi4 
+SECTION: ".data"
+  motorSeq heading maze mazeDist 
+SECTION: ".bss"
+  toggle1 toggle2 integral motorL motorR stepsL stepsR mouseX mouseY 
+SECTION: ".init"
+  Cpu_Interrupt Cpu_Delay100US _EntryPoint 
+SECTION: "NON_BANKED"
+  Sensor_Interrupt MotorL_DutyTimer_Interrupt MotorR_DutyTimer_Interrupt 
+  MotorL_DriveTimer_Interrupt MotorR_DriveTimer_Interrupt PID_Interrupt 
+SECTION: ".common"
+  Shadow_E Shadow_T Shadow_M Shadow_A sensors place 
+SECTION: "MotorR_EN_CODE"
+  MotorR_EN_PutVal 
+SECTION: "MotorL_EN_CODE"
+  MotorL_EN_PutVal 
+SECTION: "MotorRDrive_LCD_DB_CODE"
+  MotorRDrive_LCD_DB_PutVal 
+SECTION: "MotorLDrive_1_CODE"
+  MotorLDrive_1_PutVal 
+SECTION: "MotorLDrive_2_CODE"
+  MotorLDrive_2_PutVal 
+SECTION: "MotorLDrive_4_CODE"
+  MotorLDrive_4_PutVal 
+SECTION: "MotorLDrive_8_CODE"
+  MotorLDrive_8_PutVal 
+SECTION: "Sensor_DATA"
+  OutFlg SumChan ModeFlg Sensor_OutV 
+SECTION: "Sensor_CODE"
+  Sensor_Measure Sensor_GetValue8 Sensor_Init 
+SECTION: "MotorL_DriveTimer_CODE"
+  MotorL_DriveTimer_SetPeriodUS MotorL_DriveTimer_Init 
+SECTION: "MotorR_DriveTimer_CODE"
+  MotorR_DriveTimer_SetPeriodUS MotorR_DriveTimer_Init 
+SECTION: "LCD_RS_CODE"
+  LCD_RS_PutVal 
+SECTION: "LCD_EN_CODE"
+  LCD_EN_PutVal 
+SECTION: ".abs_section_0"
+  _PORTA 
+SECTION: ".abs_section_1"
+  _PORTB 
+SECTION: ".abs_section_2"
+  _DDRA 
+SECTION: ".abs_section_3"
+  _DDRB 
+SECTION: ".abs_section_8"
+  _PORTE 
+SECTION: ".abs_section_9"
+  _DDRE 
+SECTION: ".abs_section_a"
+  _PEAR 
+SECTION: ".abs_section_b"
+  _MODE 
+SECTION: ".abs_section_c"
+  _PUCR 
+SECTION: ".abs_section_d"
+  _RDRIV 
+SECTION: ".abs_section_e"
+  _EBICTL 
+SECTION: ".abs_section_10"
+  _INITRM 
+SECTION: ".abs_section_11"
+  _INITRG 
+SECTION: ".abs_section_13"
+  _MISC 
+SECTION: ".abs_section_15"
+  _ITCR 
+SECTION: ".abs_section_16"
+  _ITEST 
+SECTION: ".abs_section_19"
+  _VREGCTRL 
+SECTION: ".abs_section_1c"
+  _MEMSIZ0 
+SECTION: ".abs_section_1d"
+  _MEMSIZ1 
+SECTION: ".abs_section_1e"
+  _INTCR 
+SECTION: ".abs_section_1f"
+  _HPRIO 
+SECTION: ".abs_section_20"
+  _DBGC1 
+SECTION: ".abs_section_21"
+  _DBGSC 
+SECTION: ".abs_section_24"
+  _DBGCNT 
+SECTION: ".abs_section_25"
+  _DBGCCX 
+SECTION: ".abs_section_28"
+  _DBGC2 
+SECTION: ".abs_section_29"
+  _DBGC3 
+SECTION: ".abs_section_2a"
+  _DBGCAX 
+SECTION: ".abs_section_2d"
+  _DBGCBX 
+SECTION: ".abs_section_30"
+  _PPAGE 
+SECTION: ".abs_section_34"
+  _SYNR 
+SECTION: ".abs_section_35"
+  _REFDV 
+SECTION: ".abs_section_37"
+  _CRGFLG 
+SECTION: ".abs_section_38"
+  _CRGINT 
+SECTION: ".abs_section_39"
+  _CLKSEL 
+SECTION: ".abs_section_3a"
+  _PLLCTL 
+SECTION: ".abs_section_3b"
+  _RTICTL 
+SECTION: ".abs_section_3c"
+  _COPCTL 
+SECTION: ".abs_section_3f"
+  _ARMCOP 
+SECTION: ".abs_section_40"
+  _TIOS 
+SECTION: ".abs_section_41"
+  _CFORC 
+SECTION: ".abs_section_42"
+  _OC7M 
+SECTION: ".abs_section_43"
+  _OC7D 
+SECTION: ".abs_section_46"
+  _TSCR1 
+SECTION: ".abs_section_47"
+  _TTOV 
+SECTION: ".abs_section_48"
+  _TCTL1 
+SECTION: ".abs_section_49"
+  _TCTL2 
+SECTION: ".abs_section_4a"
+  _TCTL3 
+SECTION: ".abs_section_4b"
+  _TCTL4 
+SECTION: ".abs_section_4c"
+  _TIE 
+SECTION: ".abs_section_4d"
+  _TSCR2 
+SECTION: ".abs_section_4e"
+  _TFLG1 
+SECTION: ".abs_section_4f"
+  _TFLG2 
+SECTION: ".abs_section_60"
+  _PACTL 
+SECTION: ".abs_section_61"
+  _PAFLG 
+SECTION: ".abs_section_86"
+  _ATDSTAT0 
+SECTION: ".abs_section_89"
+  _ATDTEST1 
+SECTION: ".abs_section_8b"
+  _ATDSTAT1 
+SECTION: ".abs_section_8d"
+  _ATDDIEN 
+SECTION: ".abs_section_8f"
+  _PORTAD0 
+SECTION: ".abs_section_ca"
+  _SCICR1 
+SECTION: ".abs_section_cb"
+  _SCICR2 
+SECTION: ".abs_section_cc"
+  _SCISR1 
+SECTION: ".abs_section_cd"
+  _SCISR2 
+SECTION: ".abs_section_ce"
+  _SCIDRH 
+SECTION: ".abs_section_cf"
+  _SCIDRL 
+SECTION: ".abs_section_d8"
+  _SPICR1 
+SECTION: ".abs_section_d9"
+  _SPICR2 
+SECTION: ".abs_section_da"
+  _SPIBR 
+SECTION: ".abs_section_db"
+  _SPISR 
+SECTION: ".abs_section_dd"
+  _SPIDR 
+SECTION: ".abs_section_e0"
+  _PWME 
+SECTION: ".abs_section_e1"
+  _PWMPOL 
+SECTION: ".abs_section_e2"
+  _PWMCLK 
+SECTION: ".abs_section_e3"
+  _PWMPRCLK 
+SECTION: ".abs_section_e4"
+  _PWMCAE 
+SECTION: ".abs_section_e5"
+  _PWMCTL 
+SECTION: ".abs_section_e8"
+  _PWMSCLA 
+SECTION: ".abs_section_e9"
+  _PWMSCLB 
+SECTION: ".abs_section_fe"
+  _PWMSDN 
+SECTION: ".abs_section_100"
+  _FCLKDIV 
+SECTION: ".abs_section_101"
+  _FSEC 
+SECTION: ".abs_section_103"
+  _FCNFG 
+SECTION: ".abs_section_104"
+  _FPROT 
+SECTION: ".abs_section_105"
+  _FSTAT 
+SECTION: ".abs_section_106"
+  _FCMD 
+SECTION: ".abs_section_140"
+  _CANCTL0 
+SECTION: ".abs_section_141"
+  _CANCTL1 
+SECTION: ".abs_section_142"
+  _CANBTR0 
+SECTION: ".abs_section_143"
+  _CANBTR1 
+SECTION: ".abs_section_144"
+  _CANRFLG 
+SECTION: ".abs_section_145"
+  _CANRIER 
+SECTION: ".abs_section_146"
+  _CANTFLG 
+SECTION: ".abs_section_147"
+  _CANTIER 
+SECTION: ".abs_section_148"
+  _CANTARQ 
+SECTION: ".abs_section_149"
+  _CANTAAK 
+SECTION: ".abs_section_14a"
+  _CANTBSEL 
+SECTION: ".abs_section_14b"
+  _CANIDAC 
+SECTION: ".abs_section_14e"
+  _CANRXERR 
+SECTION: ".abs_section_14f"
+  _CANTXERR 
+SECTION: ".abs_section_150"
+  _CANIDAR0 
+SECTION: ".abs_section_151"
+  _CANIDAR1 
+SECTION: ".abs_section_152"
+  _CANIDAR2 
+SECTION: ".abs_section_153"
+  _CANIDAR3 
+SECTION: ".abs_section_154"
+  _CANIDMR0 
+SECTION: ".abs_section_155"
+  _CANIDMR1 
+SECTION: ".abs_section_156"
+  _CANIDMR2 
+SECTION: ".abs_section_157"
+  _CANIDMR3 
+SECTION: ".abs_section_158"
+  _CANIDAR4 
+SECTION: ".abs_section_159"
+  _CANIDAR5 
+SECTION: ".abs_section_15a"
+  _CANIDAR6 
+SECTION: ".abs_section_15b"
+  _CANIDAR7 
+SECTION: ".abs_section_15c"
+  _CANIDMR4 
+SECTION: ".abs_section_15d"
+  _CANIDMR5 
+SECTION: ".abs_section_15e"
+  _CANIDMR6 
+SECTION: ".abs_section_15f"
+  _CANIDMR7 
+SECTION: ".abs_section_160"
+  _CANRXIDR0 
+SECTION: ".abs_section_161"
+  _CANRXIDR1 
+SECTION: ".abs_section_162"
+  _CANRXIDR2 
+SECTION: ".abs_section_163"
+  _CANRXIDR3 
+SECTION: ".abs_section_164"
+  _CANRXDSR0 
+SECTION: ".abs_section_165"
+  _CANRXDSR1 
+SECTION: ".abs_section_166"
+  _CANRXDSR2 
+SECTION: ".abs_section_167"
+  _CANRXDSR3 
+SECTION: ".abs_section_168"
+  _CANRXDSR4 
+SECTION: ".abs_section_169"
+  _CANRXDSR5 
+SECTION: ".abs_section_16a"
+  _CANRXDSR6 
+SECTION: ".abs_section_16b"
+  _CANRXDSR7 
+SECTION: ".abs_section_16c"
+  _CANRXDLR 
+SECTION: ".abs_section_170"
+  _CANTXIDR0 
+SECTION: ".abs_section_171"
+  _CANTXIDR1 
+SECTION: ".abs_section_172"
+  _CANTXIDR2 
+SECTION: ".abs_section_173"
+  _CANTXIDR3 
+SECTION: ".abs_section_174"
+  _CANTXDSR0 
+SECTION: ".abs_section_175"
+  _CANTXDSR1 
+SECTION: ".abs_section_176"
+  _CANTXDSR2 
+SECTION: ".abs_section_177"
+  _CANTXDSR3 
+SECTION: ".abs_section_178"
+  _CANTXDSR4 
+SECTION: ".abs_section_179"
+  _CANTXDSR5 
+SECTION: ".abs_section_17a"
+  _CANTXDSR6 
+SECTION: ".abs_section_17b"
+  _CANTXDSR7 
+SECTION: ".abs_section_17c"
+  _CANTXDLR 
+SECTION: ".abs_section_17d"
+  _CANTXTBPR 
+SECTION: ".abs_section_240"
+  _PTT 
+SECTION: ".abs_section_241"
+  _PTIT 
+SECTION: ".abs_section_242"
+  _DDRT 
+SECTION: ".abs_section_243"
+  _RDRT 
+SECTION: ".abs_section_244"
+  _PERT 
+SECTION: ".abs_section_245"
+  _PPST 
+SECTION: ".abs_section_247"
+  _MODRR 
+SECTION: ".abs_section_248"
+  _PTS 
+SECTION: ".abs_section_249"
+  _PTIS 
+SECTION: ".abs_section_24a"
+  _DDRS 
+SECTION: ".abs_section_24b"
+  _RDRS 
+SECTION: ".abs_section_24c"
+  _PERS 
+SECTION: ".abs_section_24d"
+  _PPSS 
+SECTION: ".abs_section_24e"
+  _WOMS 
+SECTION: ".abs_section_250"
+  _PTM 
+SECTION: ".abs_section_251"
+  _PTIM 
+SECTION: ".abs_section_252"
+  _DDRM 
+SECTION: ".abs_section_253"
+  _RDRM 
+SECTION: ".abs_section_254"
+  _PERM 
+SECTION: ".abs_section_255"
+  _PPSM 
+SECTION: ".abs_section_256"
+  _WOMM 
+SECTION: ".abs_section_258"
+  _PTP 
+SECTION: ".abs_section_259"
+  _PTIP 
+SECTION: ".abs_section_25a"
+  _DDRP 
+SECTION: ".abs_section_25b"
+  _RDRP 
+SECTION: ".abs_section_25c"
+  _PERP 
+SECTION: ".abs_section_25d"
+  _PPSP 
+SECTION: ".abs_section_25e"
+  _PIEP 
+SECTION: ".abs_section_25f"
+  _PIFP 
+SECTION: ".abs_section_260"
+  _PTH 
+SECTION: ".abs_section_261"
+  _PTIH 
+SECTION: ".abs_section_262"
+  _DDRH 
+SECTION: ".abs_section_263"
+  _RDRH 
+SECTION: ".abs_section_264"
+  _PERH 
+SECTION: ".abs_section_265"
+  _PPSH 
+SECTION: ".abs_section_266"
+  _PIEH 
+SECTION: ".abs_section_267"
+  _PIFH 
+SECTION: ".abs_section_268"
+  _PTJ 
+SECTION: ".abs_section_269"
+  _PTIJ 
+SECTION: ".abs_section_26a"
+  _DDRJ 
+SECTION: ".abs_section_26b"
+  _RDRJ 
+SECTION: ".abs_section_26c"
+  _PERJ 
+SECTION: ".abs_section_26d"
+  _PPSJ 
+SECTION: ".abs_section_26e"
+  _PIEJ 
+SECTION: ".abs_section_26f"
+  _PIFJ 
+SECTION: ".abs_section_270"
+  _PTAD 
+SECTION: ".abs_section_271"
+  _PTIAD 
+SECTION: ".abs_section_272"
+  _DDRAD 
+SECTION: ".abs_section_273"
+  _RDRAD 
+SECTION: ".abs_section_274"
+  _PERAD 
+SECTION: ".abs_section_275"
+  _PPSAD 
+SECTION: ".abs_section_1a"
+  _PARTID 
+SECTION: ".abs_section_22"
+  _DBGTB 
+SECTION: ".abs_section_26"
+  _DBGCC 
+SECTION: ".abs_section_2b"
+  _DBGCA 
+SECTION: ".abs_section_2e"
+  _DBGCB 
+SECTION: ".abs_section_44"
+  _TCNT 
+SECTION: ".abs_section_50"
+  _TC0 
+SECTION: ".abs_section_52"
+  _TC1 
+SECTION: ".abs_section_54"
+  _TC2 
+SECTION: ".abs_section_56"
+  _TC3 
+SECTION: ".abs_section_58"
+  _TC4 
+SECTION: ".abs_section_5a"
+  _TC5 
+SECTION: ".abs_section_5c"
+  _TC6 
+SECTION: ".abs_section_5e"
+  _TC7 
+SECTION: ".abs_section_62"
+  _PACNT 
+SECTION: ".abs_section_82"
+  _ATDCTL23 
+SECTION: ".abs_section_84"
+  _ATDCTL45 
+SECTION: ".abs_section_90"
+  _ATDDR0 
+SECTION: ".abs_section_92"
+  _ATDDR1 
+SECTION: ".abs_section_94"
+  _ATDDR2 
+SECTION: ".abs_section_96"
+  _ATDDR3 
+SECTION: ".abs_section_98"
+  _ATDDR4 
+SECTION: ".abs_section_9a"
+  _ATDDR5 
+SECTION: ".abs_section_9c"
+  _ATDDR6 
+SECTION: ".abs_section_9e"
+  _ATDDR7 
+SECTION: ".abs_section_c8"
+  _SCIBD 
+SECTION: ".abs_section_ec"
+  _PWMCNT01 
+SECTION: ".abs_section_ee"
+  _PWMCNT23 
+SECTION: ".abs_section_f0"
+  _PWMCNT45 
+SECTION: ".abs_section_f2"
+  _PWMPER01 
+SECTION: ".abs_section_f4"
+  _PWMPER23 
+SECTION: ".abs_section_f6"
+  _PWMPER45 
+SECTION: ".abs_section_f8"
+  _PWMDTY01 
+SECTION: ".abs_section_fa"
+  _PWMDTY23 
+SECTION: ".abs_section_fc"
+  _PWMDTY45 
+SECTION: ".abs_section_16e"
+  _CANRXTSR 
+SECTION: ".abs_section_17e"
+  _CANTXTSR 
+SECTION: ".abs_section_ff80"
+  _InterruptVectorTable 
+SECTION: "Sensor_CONST"
+  Channels 
+SECTION: "MotorL_DriveTimer_DATA"
+  EnUser CmpVal 
+SECTION: "MotorR_DriveTimer_DATA"
+  EnUser CmpVal 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     _PORTA                                       0       1       1       3   .abs_section_0
+     _PORTB                                       1       1       1       0   .abs_section_1
+     _DDRA                                        2       1       1       1   .abs_section_2
+     _DDRB                                        3       1       1       1   .abs_section_3
+     _PORTE                                       8       1       1       5   .abs_section_8
+     _DDRE                                        9       1       1       1   .abs_section_9
+     _PEAR                                        A       1       1       3   .abs_section_a
+     _MODE                                        B       1       1       0   .abs_section_b
+     _PUCR                                        C       1       1       1   .abs_section_c
+     _RDRIV                                       D       1       1       1   .abs_section_d
+     _EBICTL                                      E       1       1       0   .abs_section_e
+     _INITRM                                     10       1       1       1   .abs_section_10
+     _INITRG                                     11       1       1       0   .abs_section_11
+     _MISC                                       13       1       1       1   .abs_section_13
+     _ITCR                                       15       1       1       0   .abs_section_15
+     _ITEST                                      16       1       1       0   .abs_section_16
+     _VREGCTRL                                   19       1       1       1   .abs_section_19
+     _PARTID                                     1A       2       2       0   .abs_section_1a
+     _MEMSIZ0                                    1C       1       1       0   .abs_section_1c
+     _MEMSIZ1                                    1D       1       1       0   .abs_section_1d
+     _INTCR                                      1E       1       1       1   .abs_section_1e
+     _HPRIO                                      1F       1       1       0   .abs_section_1f
+     _DBGC1                                      20       1       1       0   .abs_section_20
+     _DBGSC                                      21       1       1       0   .abs_section_21
+     _DBGTB                                      22       2       2       0   .abs_section_22
+     _DBGCNT                                     24       1       1       0   .abs_section_24
+     _DBGCCX                                     25       1       1       0   .abs_section_25
+     _DBGCC                                      26       2       2       0   .abs_section_26
+     _DBGC2                                      28       1       1       0   .abs_section_28
+     _DBGC3                                      29       1       1       0   .abs_section_29
+     _DBGCAX                                     2A       1       1       0   .abs_section_2a
+     _DBGCA                                      2B       2       2       0   .abs_section_2b
+     _DBGCBX                                     2D       1       1       0   .abs_section_2d
+     _DBGCB                                      2E       2       2       0   .abs_section_2e
+     _PPAGE                                      30       1       1       0   .abs_section_30
+     _SYNR                                       34       1       1       1   .abs_section_34
+     _REFDV                                      35       1       1       1   .abs_section_35
+     _CRGFLG                                     37       1       1       1   .abs_section_37
+     _CRGINT                                     38       1       1       1   .abs_section_38
+     _CLKSEL                                     39       1       1       2   .abs_section_39
+     _PLLCTL                                     3A       1       1       2   .abs_section_3a
+     _RTICTL                                     3B       1       1       0   .abs_section_3b
+     _COPCTL                                     3C       1       1       1   .abs_section_3c
+     _ARMCOP                                     3F       1       1       0   .abs_section_3f
+     _TIOS                                       40       1       1       1   .abs_section_40
+     _CFORC                                      41       1       1       0   .abs_section_41
+     _OC7M                                       42       1       1       1   .abs_section_42
+     _OC7D                                       43       1       1       0   .abs_section_43
+     _TCNT                                       44       2       2       0   .abs_section_44
+     _TSCR1                                      46       1       1       2   .abs_section_46
+     _TTOV                                       47       1       1       1   .abs_section_47
+     _TCTL1                                      48       1       1       1   .abs_section_48
+     _TCTL2                                      49       1       1       1   .abs_section_49
+     _TCTL3                                      4A       1       1       0   .abs_section_4a
+     _TCTL4                                      4B       1       1       0   .abs_section_4b
+     _TIE                                        4C       1       1       1   .abs_section_4c
+     _TSCR2                                      4D       1       1       2   .abs_section_4d
+     _TFLG1                                      4E       1       1       6   .abs_section_4e
+     _TFLG2                                      4F       1       1       0   .abs_section_4f
+     _TC0                                        50       2       2       3   .abs_section_50
+     _TC1                                        52       2       2       3   .abs_section_52
+     _TC2                                        54       2       2       3   .abs_section_54
+     _TC3                                        56       2       2       3   .abs_section_56
+     _TC4                                        58       2       2       3   .abs_section_58
+     _TC5                                        5A       2       2       0   .abs_section_5a
+     _TC6                                        5C       2       2       0   .abs_section_5c
+     _TC7                                        5E       2       2       0   .abs_section_5e
+     _PACTL                                      60       1       1       1   .abs_section_60
+     _PAFLG                                      61       1       1       0   .abs_section_61
+     _PACNT                                      62       2       2       0   .abs_section_62
+     _ATDCTL23                                   82       2       2       2   .abs_section_82
+     _ATDCTL45                                   84       2       2       3   .abs_section_84
+     _ATDSTAT0                                   86       1       1       0   .abs_section_86
+     _ATDTEST1                                   89       1       1       0   .abs_section_89
+     _ATDSTAT1                                   8B       1       1       0   .abs_section_8b
+     _ATDDIEN                                    8D       1       1       1   .abs_section_8d
+     _PORTAD0                                    8F       1       1       0   .abs_section_8f
+     _ATDDR0                                     90       2       2       1   .abs_section_90
+     _ATDDR1                                     92       2       2       0   .abs_section_92
+     _ATDDR2                                     94       2       2       0   .abs_section_94
+     _ATDDR3                                     96       2       2       0   .abs_section_96
+     _ATDDR4                                     98       2       2       0   .abs_section_98
+     _ATDDR5                                     9A       2       2       0   .abs_section_9a
+     _ATDDR6                                     9C       2       2       0   .abs_section_9c
+     _ATDDR7                                     9E       2       2       0   .abs_section_9e
+     _SCIBD                                      C8       2       2       0   .abs_section_c8
+     _SCICR1                                     CA       1       1       0   .abs_section_ca
+     _SCICR2                                     CB       1       1       0   .abs_section_cb
+     _SCISR1                                     CC       1       1       0   .abs_section_cc
+     _SCISR2                                     CD       1       1       0   .abs_section_cd
+     _SCIDRH                                     CE       1       1       0   .abs_section_ce
+     _SCIDRL                                     CF       1       1       0   .abs_section_cf
+     _SPICR1                                     D8       1       1       0   .abs_section_d8
+     _SPICR2                                     D9       1       1       0   .abs_section_d9
+     _SPIBR                                      DA       1       1       0   .abs_section_da
+     _SPISR                                      DB       1       1       0   .abs_section_db
+     _SPIDR                                      DD       1       1       0   .abs_section_dd
+     _PWME                                       E0       1       1       0   .abs_section_e0
+     _PWMPOL                                     E1       1       1       0   .abs_section_e1
+     _PWMCLK                                     E2       1       1       0   .abs_section_e2
+     _PWMPRCLK                                   E3       1       1       0   .abs_section_e3
+     _PWMCAE                                     E4       1       1       0   .abs_section_e4
+     _PWMCTL                                     E5       1       1       0   .abs_section_e5
+     _PWMSCLA                                    E8       1       1       0   .abs_section_e8
+     _PWMSCLB                                    E9       1       1       0   .abs_section_e9
+     _PWMCNT01                                   EC       2       2       0   .abs_section_ec
+     _PWMCNT23                                   EE       2       2       0   .abs_section_ee
+     _PWMCNT45                                   F0       2       2       0   .abs_section_f0
+     _PWMPER01                                   F2       2       2       0   .abs_section_f2
+     _PWMPER23                                   F4       2       2       0   .abs_section_f4
+     _PWMPER45                                   F6       2       2       0   .abs_section_f6
+     _PWMDTY01                                   F8       2       2       0   .abs_section_f8
+     _PWMDTY23                                   FA       2       2       0   .abs_section_fa
+     _PWMDTY45                                   FC       2       2       0   .abs_section_fc
+     _PWMSDN                                     FE       1       1       0   .abs_section_fe
+     _FCLKDIV                                   100       1       1       0   .abs_section_100
+     _FSEC                                      101       1       1       0   .abs_section_101
+     _FCNFG                                     103       1       1       0   .abs_section_103
+     _FPROT                                     104       1       1       0   .abs_section_104
+     _FSTAT                                     105       1       1       0   .abs_section_105
+     _FCMD                                      106       1       1       0   .abs_section_106
+     _CANCTL0                                   140       1       1       0   .abs_section_140
+     _CANCTL1                                   141       1       1       0   .abs_section_141
+     _CANBTR0                                   142       1       1       0   .abs_section_142
+     _CANBTR1                                   143       1       1       0   .abs_section_143
+     _CANRFLG                                   144       1       1       0   .abs_section_144
+     _CANRIER                                   145       1       1       0   .abs_section_145
+     _CANTFLG                                   146       1       1       0   .abs_section_146
+     _CANTIER                                   147       1       1       0   .abs_section_147
+     _CANTARQ                                   148       1       1       0   .abs_section_148
+     _CANTAAK                                   149       1       1       0   .abs_section_149
+     _CANTBSEL                                  14A       1       1       0   .abs_section_14a
+     _CANIDAC                                   14B       1       1       0   .abs_section_14b
+     _CANRXERR                                  14E       1       1       0   .abs_section_14e
+     _CANTXERR                                  14F       1       1       0   .abs_section_14f
+     _CANIDAR0                                  150       1       1       0   .abs_section_150
+     _CANIDAR1                                  151       1       1       0   .abs_section_151
+     _CANIDAR2                                  152       1       1       0   .abs_section_152
+     _CANIDAR3                                  153       1       1       0   .abs_section_153
+     _CANIDMR0                                  154       1       1       0   .abs_section_154
+     _CANIDMR1                                  155       1       1       0   .abs_section_155
+     _CANIDMR2                                  156       1       1       0   .abs_section_156
+     _CANIDMR3                                  157       1       1       0   .abs_section_157
+     _CANIDAR4                                  158       1       1       0   .abs_section_158
+     _CANIDAR5                                  159       1       1       0   .abs_section_159
+     _CANIDAR6                                  15A       1       1       0   .abs_section_15a
+     _CANIDAR7                                  15B       1       1       0   .abs_section_15b
+     _CANIDMR4                                  15C       1       1       0   .abs_section_15c
+     _CANIDMR5                                  15D       1       1       0   .abs_section_15d
+     _CANIDMR6                                  15E       1       1       0   .abs_section_15e
+     _CANIDMR7                                  15F       1       1       0   .abs_section_15f
+     _CANRXIDR0                                 160       1       1       0   .abs_section_160
+     _CANRXIDR1                                 161       1       1       0   .abs_section_161
+     _CANRXIDR2                                 162       1       1       0   .abs_section_162
+     _CANRXIDR3                                 163       1       1       0   .abs_section_163
+     _CANRXDSR0                                 164       1       1       0   .abs_section_164
+     _CANRXDSR1                                 165       1       1       0   .abs_section_165
+     _CANRXDSR2                                 166       1       1       0   .abs_section_166
+     _CANRXDSR3                                 167       1       1       0   .abs_section_167
+     _CANRXDSR4                                 168       1       1       0   .abs_section_168
+     _CANRXDSR5                                 169       1       1       0   .abs_section_169
+     _CANRXDSR6                                 16A       1       1       0   .abs_section_16a
+     _CANRXDSR7                                 16B       1       1       0   .abs_section_16b
+     _CANRXDLR                                  16C       1       1       0   .abs_section_16c
+     _CANRXTSR                                  16E       2       2       0   .abs_section_16e
+     _CANTXIDR0                                 170       1       1       0   .abs_section_170
+     _CANTXIDR1                                 171       1       1       0   .abs_section_171
+     _CANTXIDR2                                 172       1       1       0   .abs_section_172
+     _CANTXIDR3                                 173       1       1       0   .abs_section_173
+     _CANTXDSR0                                 174       1       1       0   .abs_section_174
+     _CANTXDSR1                                 175       1       1       0   .abs_section_175
+     _CANTXDSR2                                 176       1       1       0   .abs_section_176
+     _CANTXDSR3                                 177       1       1       0   .abs_section_177
+     _CANTXDSR4                                 178       1       1       0   .abs_section_178
+     _CANTXDSR5                                 179       1       1       0   .abs_section_179
+     _CANTXDSR6                                 17A       1       1       0   .abs_section_17a
+     _CANTXDSR7                                 17B       1       1       0   .abs_section_17b
+     _CANTXDLR                                  17C       1       1       0   .abs_section_17c
+     _CANTXTBPR                                 17D       1       1       0   .abs_section_17d
+     _CANTXTSR                                  17E       2       2       0   .abs_section_17e
+     _PTT                                       240       1       1       7   .abs_section_240
+     _PTIT                                      241       1       1       0   .abs_section_241
+     _DDRT                                      242       1       1       1   .abs_section_242
+     _RDRT                                      243       1       1       1   .abs_section_243
+     _PERT                                      244       1       1       1   .abs_section_244
+     _PPST                                      245       1       1       0   .abs_section_245
+     _MODRR                                     247       1       1       0   .abs_section_247
+     _PTS                                       248       1       1       0   .abs_section_248
+     _PTIS                                      249       1       1       0   .abs_section_249
+     _DDRS                                      24A       1       1       0   .abs_section_24a
+     _RDRS                                      24B       1       1       1   .abs_section_24b
+     _PERS                                      24C       1       1       1   .abs_section_24c
+     _PPSS                                      24D       1       1       0   .abs_section_24d
+     _WOMS                                      24E       1       1       0   .abs_section_24e
+     _PTM                                       250       1       1       7   .abs_section_250
+     _PTIM                                      251       1       1       0   .abs_section_251
+     _DDRM                                      252       1       1       1   .abs_section_252
+     _RDRM                                      253       1       1       1   .abs_section_253
+     _PERM                                      254       1       1       1   .abs_section_254
+     _PPSM                                      255       1       1       0   .abs_section_255
+     _WOMM                                      256       1       1       1   .abs_section_256
+     _PTP                                       258       1       1       0   .abs_section_258
+     _PTIP                                      259       1       1       0   .abs_section_259
+     _DDRP                                      25A       1       1       0   .abs_section_25a
+     _RDRP                                      25B       1       1       1   .abs_section_25b
+     _PERP                                      25C       1       1       1   .abs_section_25c
+     _PPSP                                      25D       1       1       0   .abs_section_25d
+     _PIEP                                      25E       1       1       0   .abs_section_25e
+     _PIFP                                      25F       1       1       0   .abs_section_25f
+     _PTH                                       260       1       1       0   .abs_section_260
+     _PTIH                                      261       1       1       0   .abs_section_261
+     _DDRH                                      262       1       1       0   .abs_section_262
+     _RDRH                                      263       1       1       0   .abs_section_263
+     _PERH                                      264       1       1       0   .abs_section_264
+     _PPSH                                      265       1       1       0   .abs_section_265
+     _PIEH                                      266       1       1       0   .abs_section_266
+     _PIFH                                      267       1       1       0   .abs_section_267
+     _PTJ                                       268       1       1       0   .abs_section_268
+     _PTIJ                                      269       1       1       0   .abs_section_269
+     _DDRJ                                      26A       1       1       0   .abs_section_26a
+     _RDRJ                                      26B       1       1       0   .abs_section_26b
+     _PERJ                                      26C       1       1       1   .abs_section_26c
+     _PPSJ                                      26D       1       1       0   .abs_section_26d
+     _PIEJ                                      26E       1       1       0   .abs_section_26e
+     _PIFJ                                      26F       1       1       0   .abs_section_26f
+     _PTAD                                      270       1       1       0   .abs_section_270
+     _PTIAD                                     271       1       1       0   .abs_section_271
+     _DDRAD                                     272       1       1       0   .abs_section_272
+     _RDRAD                                     273       1       1       1   .abs_section_273
+     _PERAD                                     274       1       1       0   .abs_section_274
+     _PPSAD                                     275       1       1       0   .abs_section_275
+     motorSeq                                  3800       8       8       2   .data       
+     heading                                   3808       8       8      20   .data       
+     maze                                      3810     270     624       9   .data       
+     mazeDist                                  3A80      9C     156      10   .data       
+     toggle1                                   3B1C       2       2       2   .bss        
+     toggle2                                   3B1E       2       2       2   .bss        
+     integral                                  3B20       2       2       5   .bss        
+     motorL                                    3B22       2       2       6   .bss        
+     motorR                                    3B24       2       2       6   .bss        
+     stepsL                                    3B26       2       2      12   .bss        
+     stepsR                                    3B28       2       2      12   .bss        
+     mouseX                                    3B2A       2       2       9   .bss        
+     mouseY                                    3B2C       2       2       9   .bss        
+     Shadow_E                                  3B2E       1       1       6   .common     
+     Shadow_T                                  3B2F       1       1       7   .common     
+     Shadow_M                                  3B30       1       1       7   .common     
+     Shadow_A                                  3B31       1       1       3   .common     
+     sensors                                   3B32       3       3       6   .common     
+     place                                     3B35       2       2       7   .common     
+     OutFlg                                    3B37       1       1       4   Sensor_DATA 
+     SumChan                                   3B38       1       1       4   Sensor_DATA 
+     ModeFlg                                   3B39       1       1       5   Sensor_DATA 
+     Sensor_OutV                               3B3A       3       3       4   Sensor_DATA 
+     EnUser                                    3B3D       1       1       1   MotorL_DriveTimer_DATA
+     CmpVal                                    3B3E       2       2       3   MotorL_DriveTimer_DATA
+     EnUser                                    3B40       1       1       1   MotorR_DriveTimer_DATA
+     CmpVal                                    3B41       2       2       3   MotorR_DriveTimer_DATA
+     Cpu_Interrupt                             C000       2       2      55   .init       
+     Cpu_Delay100US                            C002       E      14      13   .init       
+     _EntryPoint                               C010      2B      43       3   .init       
+     Sensor_Interrupt                          C045      28      40       1   NON_BANKED  
+     MotorL_DutyTimer_Interrupt                C06D       F      15       1   NON_BANKED  
+     MotorR_DutyTimer_Interrupt                C07C       F      15       1   NON_BANKED  
+     MotorL_DriveTimer_Interrupt               C08B       F      15       1   NON_BANKED  
+     MotorR_DriveTimer_Interrupt               C09A       F      15       1   NON_BANKED  
+     PID_Interrupt                             C0A9       F      15       1   NON_BANKED  
+     Init                                      C0B8      29      41       1   .text       
+     _Startup                                  C0E1      12      18       1   .text       
+     abs                                       C0F3       A      10       2   .text       
+     PE_low_level_init                         C0FD      B7     183       1   .text       
+     MotorR_WriteBits                          C1B4       3       3       2   .text       
+     MotorL_WriteBits                          C1B7      2F      47       2   .text       
+     PID_OnInterrupt                           C1E6      87     135       1   .text       
+     MotorR_DriveTimer_OnInterrupt             C26D      32      50       1   .text       
+     MotorL_DriveTimer_OnInterrupt             C29F      32      50       1   .text       
+     MotorR_DutyTimer_OnInterrupt              C2D1      1D      29       1   .text       
+     MotorL_DutyTimer_OnInterrupt              C2EE      1D      29       1   .text       
+     Sensor_OnEnd                              C30B       1       1       1   .text       
+     writeCom                                  C30C      33      51       7   .text       
+     InitializeLCD                             C33F      36      54       1   .text       
+     pollSensors                               C375       B      11       1   .text       
+     powerMotors                               C380      1A      26       8   .text       
+     Forward                                   C39A      1F      31       4   .text       
+     Right                                     C3B9      1D      29       4   .text       
+     Left                                      C3D6      1D      29       4   .text       
+     Turn                                      C3F3      1E      30       4   .text       
+     solveMaze                                 C411     2DB     731      42   .text       
+     main                                      C6EC      49      73       1   .text       
+     PE_Timer_LngMul                           C735      6C     108       2   .text       
+     PE_Timer_LngHi4                           C7A1      2C      44       2   .text       
+     MotorR_EN_PutVal                          C7CD      13      19       2   MotorR_EN_CODE
+     MotorL_EN_PutVal                          C7E0      19      25       1   MotorL_EN_CODE
+     MotorRDrive_LCD_DB_PutVal                 C7F9      1B      27       3   MotorRDrive_LCD_DB_CODE
+     MotorLDrive_1_PutVal                      C814      15      21       1   MotorLDrive_1_CODE
+     MotorLDrive_2_PutVal                      C829      15      21       1   MotorLDrive_2_CODE
+     MotorLDrive_4_PutVal                      C83E      15      21       1   MotorLDrive_4_CODE
+     MotorLDrive_8_PutVal                      C853      15      21       1   MotorLDrive_8_CODE
+     Sensor_Measure                            C868      25      37       1   Sensor_CODE 
+     Sensor_GetValue8                          C88D      1E      30       1   Sensor_CODE 
+     Sensor_Init                               C8AB      12      18       1   Sensor_CODE 
+     MotorL_DriveTimer_SetPeriodUS             C8BD      47      71       1   MotorL_DriveTimer_CODE
+     MotorL_DriveTimer_Init                    C904       E      14       1   MotorL_DriveTimer_CODE
+     MotorR_DriveTimer_SetPeriodUS             C912      47      71       1   MotorR_DriveTimer_CODE
+     MotorR_DriveTimer_Init                    C959       E      14       1   MotorR_DriveTimer_CODE
+     LCD_RS_PutVal                             C967      13      19       1   LCD_RS_CODE 
+     LCD_EN_PutVal                             C97A      13      19       5   LCD_EN_CODE 
+     Channels                                  C98D       3       3       1   Sensor_CONST
+     _InterruptVectorTable                     FF80      80     128       0   .abs_section_ff80
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+NOT USED PROCEDURES
+STDLIB.C.o (ansis.lib):
+  atexit getenv system mblen mbtowc wctomb mbstowcs wcstombs CheckCharWithBase 
+  _strtoul strtoul _strtol strtol _strtod strtod _itoa bsearch swap qsort div 
+  ldiv labs rand srand 
+Project.c.o:
+  writeData clearLCD displaySensors steps 
+MotorR_EN.c.o:
+  MotorR_EN_SetDir 
+MotorL_EN.c.o:
+  MotorL_EN_GetMsk MotorL_EN_GetVal MotorL_EN_GetBit MotorL_EN_PutBit 
+  MotorL_EN_ClrBit MotorL_EN_SetBit MotorL_EN_NegBit MotorL_EN_SetDir 
+MotorRDrive_LCD_DB.c.o:
+  MotorRDrive_LCD_DB_GetMsk MotorRDrive_LCD_DB_GetVal 
+  MotorRDrive_LCD_DB_GetBit MotorRDrive_LCD_DB_PutBit MotorRDrive_LCD_DB_ClrBit 
+  MotorRDrive_LCD_DB_SetBit MotorRDrive_LCD_DB_NegBit MotorRDrive_LCD_DB_SetDir 
+MotorLDrive_1.c.o:
+  MotorLDrive_1_SetDir 
+MotorLDrive_2.c.o:
+  MotorLDrive_2_SetDir 
+MotorLDrive_4.c.o:
+  MotorLDrive_4_SetDir 
+MotorLDrive_8.c.o:
+  MotorLDrive_8_SetDir 
+Sensor.c.o:
+  Sensor_GetValue16 
+MotorL_DutyTimer.c.o:
+  MotorL_DutyTimer_Enable MotorL_DutyTimer_Disable 
+MotorR_DutyTimer.c.o:
+  MotorR_DutyTimer_Enable MotorR_DutyTimer_Disable 
+MotorL_DriveTimer.c.o:
+  MotorL_DriveTimer_Enable MotorL_DriveTimer_Disable 
+  MotorL_DriveTimer_SetPeriodTicks16 MotorL_DriveTimer_SetPeriodTicks32 
+  MotorL_DriveTimer_SetPeriodMS 
+MotorR_DriveTimer.c.o:
+  MotorR_DriveTimer_Enable MotorR_DriveTimer_Disable 
+  MotorR_DriveTimer_SetPeriodTicks16 MotorR_DriveTimer_SetPeriodTicks32 
+  MotorR_DriveTimer_SetPeriodMS 
+LCD_RS.c.o:
+  LCD_RS_SetDir 
+LCD_EN.c.o:
+  LCD_EN_SetDir 
+PE_Timer.c.o:
+  PE_Timer_LngHi2 
+NOT USED VARIABLES
+STDLIB.C.o (ansis.lib):
+  infinity seed channels errno 
+Cpu.c.o:
+  CCR_reg 
+Project.c.o:
+  STRING..d.1 STRING..d.2 STRING..d.3 
+MotorL_EN.c.o:
+  MotorL_EN_Table 
+MotorRDrive_LCD_DB.c.o:
+  MotorRDrive_LCD_DB_Table 
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+------- ROM-ADDRESS: 0xC990 ---- SIZE       4 ---
+Filling bytes inserted
+ 000A3800
+------- ROM-ADDRESS: 0xC994 ---- RAM-ADDRESS: 0x3800 ---- SIZE       8 ---
+Name of initialized Object : motorSeq
+ 0109080C04 060203
+------- ROM-ADDRESS: 0xC99C ---- SIZE       1 ---
+Filling bytes inserted
+ 00
+------- ROM-ADDRESS: 0xC99D ---- RAM-ADDRESS: 0x3809 ---- SIZE       1 ---
+Name of initialized Object : heading:1
+ 01
+------- ROM-ADDRESS: 0xC99E ---- SIZE       4 ---
+Filling bytes inserted
+ 00693815
+------- ROM-ADDRESS: 0xC9A2 ---- RAM-ADDRESS: 0x3815 ---- SIZE       3 ---
+Name of initialized Object : maze:5
+ 010001
+------- ROM-ADDRESS: 0xC9A5 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9AC ---- RAM-ADDRESS: 0x381F ---- SIZE       1 ---
+Name of initialized Object : maze:15
+ 01
+------- ROM-ADDRESS: 0xC9AD ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9B4 ---- RAM-ADDRESS: 0x3827 ---- SIZE       1 ---
+Name of initialized Object : maze:23
+ 01
+------- ROM-ADDRESS: 0xC9B5 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9BC ---- RAM-ADDRESS: 0x382F ---- SIZE       1 ---
+Name of initialized Object : maze:31
+ 01
+------- ROM-ADDRESS: 0xC9BD ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9C4 ---- RAM-ADDRESS: 0x3837 ---- SIZE       1 ---
+Name of initialized Object : maze:39
+ 01
+------- ROM-ADDRESS: 0xC9C5 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9CC ---- RAM-ADDRESS: 0x383F ---- SIZE       1 ---
+Name of initialized Object : maze:47
+ 01
+------- ROM-ADDRESS: 0xC9CD ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9D4 ---- RAM-ADDRESS: 0x3847 ---- SIZE       1 ---
+Name of initialized Object : maze:55
+ 01
+------- ROM-ADDRESS: 0xC9D5 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9DC ---- RAM-ADDRESS: 0x384F ---- SIZE       1 ---
+Name of initialized Object : maze:63
+ 01
+------- ROM-ADDRESS: 0xC9DD ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9E4 ---- RAM-ADDRESS: 0x3857 ---- SIZE       1 ---
+Name of initialized Object : maze:71
+ 01
+------- ROM-ADDRESS: 0xC9E5 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9EC ---- RAM-ADDRESS: 0x385F ---- SIZE       1 ---
+Name of initialized Object : maze:79
+ 01
+------- ROM-ADDRESS: 0xC9ED ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9F4 ---- RAM-ADDRESS: 0x3867 ---- SIZE       1 ---
+Name of initialized Object : maze:87
+ 01
+------- ROM-ADDRESS: 0xC9F5 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xC9FC ---- RAM-ADDRESS: 0x386F ---- SIZE       3 ---
+Name of initialized Object : maze:95
+ 010001
+------- ROM-ADDRESS: 0xC9FF ---- SIZE       5 ---
+Filling bytes inserted
+ 0000000000
+------- ROM-ADDRESS: 0xCA04 ---- RAM-ADDRESS: 0x3877 ---- SIZE       1 ---
+Name of initialized Object : maze:103
+ 01
+------- ROM-ADDRESS: 0xCA05 ---- SIZE       5 ---
+Filling bytes inserted
+ 0000000000
+------- ROM-ADDRESS: 0xCA0A ---- RAM-ADDRESS: 0x387D ---- SIZE       1 ---
+Name of initialized Object : maze:109
+ 01
+------- ROM-ADDRESS: 0xCA0B ---- SIZE       4 ---
+Filling bytes inserted
+ 000138D9
+------- ROM-ADDRESS: 0xCA0F ---- RAM-ADDRESS: 0x38D9 ---- SIZE       1 ---
+Name of initialized Object : maze:201
+ 01
+------- ROM-ADDRESS: 0xCA10 ---- SIZE       4 ---
+Filling bytes inserted
+ 000138E5
+------- ROM-ADDRESS: 0xCA14 ---- RAM-ADDRESS: 0x38E5 ---- SIZE       1 ---
+Name of initialized Object : maze:213
+ 01
+------- ROM-ADDRESS: 0xCA15 ---- SIZE       4 ---
+Filling bytes inserted
+ 00013941
+------- ROM-ADDRESS: 0xCA19 ---- RAM-ADDRESS: 0x3941 ---- SIZE       1 ---
+Name of initialized Object : maze:305
+ 01
+------- ROM-ADDRESS: 0xCA1A ---- SIZE       4 ---
+Filling bytes inserted
+ 0001394D
+------- ROM-ADDRESS: 0xCA1E ---- RAM-ADDRESS: 0x394D ---- SIZE       1 ---
+Name of initialized Object : maze:317
+ 01
+------- ROM-ADDRESS: 0xCA1F ---- SIZE       4 ---
+Filling bytes inserted
+ 000139A9
+------- ROM-ADDRESS: 0xCA23 ---- RAM-ADDRESS: 0x39A9 ---- SIZE       1 ---
+Name of initialized Object : maze:409
+ 01
+------- ROM-ADDRESS: 0xCA24 ---- SIZE       4 ---
+Filling bytes inserted
+ 000139B5
+------- ROM-ADDRESS: 0xCA28 ---- RAM-ADDRESS: 0x39B5 ---- SIZE       1 ---
+Name of initialized Object : maze:421
+ 01
+------- ROM-ADDRESS: 0xCA29 ---- SIZE       4 ---
+Filling bytes inserted
+ 00013A11
+------- ROM-ADDRESS: 0xCA2D ---- RAM-ADDRESS: 0x3A11 ---- SIZE       1 ---
+Name of initialized Object : maze:513
+ 01
+------- ROM-ADDRESS: 0xCA2E ---- SIZE       4 ---
+Filling bytes inserted
+ 01013A1B
+------- ROM-ADDRESS: 0xCA32 ---- RAM-ADDRESS: 0x3A1B ---- SIZE       3 ---
+Name of initialized Object : maze:523
+ 010001
+------- ROM-ADDRESS: 0xCA35 ---- SIZE       5 ---
+Filling bytes inserted
+ 0000000000
+------- ROM-ADDRESS: 0xCA3A ---- RAM-ADDRESS: 0x3A23 ---- SIZE       1 ---
+Name of initialized Object : maze:531
+ 01
+------- ROM-ADDRESS: 0xCA3B ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA42 ---- RAM-ADDRESS: 0x3A2B ---- SIZE       1 ---
+Name of initialized Object : maze:539
+ 01
+------- ROM-ADDRESS: 0xCA43 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA4A ---- RAM-ADDRESS: 0x3A33 ---- SIZE       1 ---
+Name of initialized Object : maze:547
+ 01
+------- ROM-ADDRESS: 0xCA4B ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA52 ---- RAM-ADDRESS: 0x3A3B ---- SIZE       1 ---
+Name of initialized Object : maze:555
+ 01
+------- ROM-ADDRESS: 0xCA53 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA5A ---- RAM-ADDRESS: 0x3A43 ---- SIZE       1 ---
+Name of initialized Object : maze:563
+ 01
+------- ROM-ADDRESS: 0xCA5B ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA62 ---- RAM-ADDRESS: 0x3A4B ---- SIZE       1 ---
+Name of initialized Object : maze:571
+ 01
+------- ROM-ADDRESS: 0xCA63 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA6A ---- RAM-ADDRESS: 0x3A53 ---- SIZE       1 ---
+Name of initialized Object : maze:579
+ 01
+------- ROM-ADDRESS: 0xCA6B ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA72 ---- RAM-ADDRESS: 0x3A5B ---- SIZE       1 ---
+Name of initialized Object : maze:587
+ 01
+------- ROM-ADDRESS: 0xCA73 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA7A ---- RAM-ADDRESS: 0x3A63 ---- SIZE       1 ---
+Name of initialized Object : maze:595
+ 01
+------- ROM-ADDRESS: 0xCA7B ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA82 ---- RAM-ADDRESS: 0x3A6B ---- SIZE       1 ---
+Name of initialized Object : maze:603
+ 01
+------- ROM-ADDRESS: 0xCA83 ---- SIZE       7 ---
+Filling bytes inserted
+ 0000000000 0000
+------- ROM-ADDRESS: 0xCA8A ---- RAM-ADDRESS: 0x3A73 ---- SIZE       1 ---
+Name of initialized Object : maze:611
+ 01
+------- ROM-ADDRESS: 0xCA8B ---- SIZE       5 ---
+Filling bytes inserted
+ 0000000000
+------- ROM-ADDRESS: 0xCA90 ---- RAM-ADDRESS: 0x3A79 ---- SIZE       3 ---
+Name of initialized Object : maze:617
+ 010001
+------- ROM-ADDRESS: 0xCA93 ---- SIZE       5 ---
+Filling bytes inserted
+ 0000000000
+------- ROM-ADDRESS: 0xCA98 ---- RAM-ADDRESS: 0x3A81 ---- SIZE     155 ---
+Name of initialized Object : mazeDist:1
+ 0800070006 0005000400 0300020003
+ 0004000500 0600070008 0007000600
+ 0500040003 0002000100 0200030004
+ 0005000600 0700060005 0004000300
+ 0200010000 0001000200 0300040005
+ 0006000600 0500040003 0002000100
+ 0000010002 0003000400 0500060007
+ 0006000500 0400030002 0001000200
+ 0300040005 0006000700 0800070006
+ 0005000400 0300020003 0004000500
+ 0600070008
+------- ROM-ADDRESS: 0xCB33 ---- SIZE       2 ---
+Filling bytes inserted
+ 0000
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+_EntryPoint               USES _INITRM _MISC _PEAR _CLKSEL _PLLCTL _SYNR 
+                                _REFDV _CRGFLG _Startup 
+Sensor_Interrupt          USES SumChan _ATDDR0 Sensor_OutV OutFlg Sensor_OnEnd 
+                                ModeFlg Channels _ATDCTL45 
+MotorL_DutyTimer_Interrupt USES _TC0 _TFLG1 MotorL_DutyTimer_OnInterrupt 
+MotorR_DutyTimer_Interrupt USES _TC1 _TFLG1 MotorR_DutyTimer_OnInterrupt 
+MotorL_DriveTimer_Interrupt USES _TC2 CmpVal _TFLG1 
+                                MotorL_DriveTimer_OnInterrupt 
+MotorR_DriveTimer_Interrupt USES _TC3 CmpVal _TFLG1 
+                                MotorR_DriveTimer_OnInterrupt 
+PID_Interrupt             USES _TC4 _TFLG1 PID_OnInterrupt 
+Init                      USES _startupData 
+_Startup                  USES __SEG_END_SSTACK Init main 
+PE_low_level_init         USES _PEAR _PORTE _PUCR _DDRE _PTT _PERT _DDRT _PTM 
+                                _WOMM _PERM _DDRM _ATDDIEN _TSCR1 _PACTL _OC7M _TIOS 
+                                _TCTL2 _TTOV _TSCR2 _TFLG1 _TCTL1 _TIE _PORTA _DDRA 
+                                _CRGINT _VREGCTRL _COPCTL _RDRIV _RDRAD _RDRM _RDRP 
+                                _RDRS _RDRT _INTCR _PERP _DDRB _PERS _PERJ Shadow_E 
+                                Shadow_M Shadow_T Sensor_Init _TC0 _TC1 
+                                MotorL_DriveTimer_Init MotorR_DriveTimer_Init _TC4 Shadow_A 
+MotorR_WriteBits          USES MotorRDrive_LCD_DB_PutVal 
+MotorL_WriteBits          USES MotorLDrive_1_PutVal MotorLDrive_2_PutVal 
+                                MotorLDrive_4_PutVal MotorLDrive_8_PutVal 
+PID_OnInterrupt           USES sensors abs integral 
+                                MotorR_DriveTimer_SetPeriodUS MotorL_DriveTimer_SetPeriodUS 
+MotorR_DriveTimer_OnInterrupt USES stepsR motorR 
+MotorL_DriveTimer_OnInterrupt USES stepsL motorL 
+MotorR_DutyTimer_OnInterrupt USES toggle2 MotorR_WriteBits motorR motorSeq 
+MotorL_DutyTimer_OnInterrupt USES toggle1 MotorL_WriteBits motorL motorSeq 
+writeCom                  USES LCD_RS_PutVal LCD_EN_PutVal 
+                                MotorRDrive_LCD_DB_PutVal Cpu_Delay100US 
+InitializeLCD             USES Cpu_Delay100US writeCom 
+pollSensors               USES Sensor_Measure sensors Sensor_GetValue8 
+powerMotors               USES MotorR_EN_PutVal MotorL_EN_PutVal 
+                                Cpu_Delay100US 
+Forward                   USES powerMotors stepsL stepsR 
+Right                     USES powerMotors stepsL stepsR 
+Left                      USES powerMotors stepsL stepsR 
+Turn                      USES powerMotors stepsL stepsR 
+solveMaze                 USES solveMaze pollSensors place heading sensors 
+                                mazeDist mouseX mouseY maze Cpu_Delay100US Left Turn 
+                                Right Forward 
+main                      USES PE_low_level_init Cpu_Delay100US InitializeLCD 
+                                mouseX mouseY solveMaze 
+MotorR_EN_PutVal          USES _PORTE Shadow_E 
+MotorL_EN_PutVal          USES Shadow_T _PTT 
+MotorRDrive_LCD_DB_PutVal USES Shadow_M _PTM 
+MotorLDrive_1_PutVal      USES _PTM Shadow_M 
+MotorLDrive_2_PutVal      USES _PTM Shadow_M 
+MotorLDrive_4_PutVal      USES _PTT Shadow_T 
+MotorLDrive_8_PutVal      USES _PTT Shadow_T 
+Sensor_Measure            USES ModeFlg OutFlg SumChan _ATDCTL45 
+Sensor_GetValue8          USES OutFlg Sensor_OutV 
+Sensor_Init               USES OutFlg ModeFlg _ATDCTL45 _ATDCTL23 
+MotorL_DriveTimer_SetPeriodUS USES PE_Timer_LngMul PE_Timer_LngHi4 CmpVal 
+MotorL_DriveTimer_Init    USES EnUser CmpVal _TC2 
+MotorR_DriveTimer_SetPeriodUS USES PE_Timer_LngMul PE_Timer_LngHi4 CmpVal 
+MotorR_DriveTimer_Init    USES EnUser CmpVal _TC3 
+LCD_RS_PutVal             USES _PORTA Shadow_A 
+LCD_EN_PutVal             USES _PORTE Shadow_E 
+_InterruptVectorTable     USES Cpu_Interrupt Sensor_Interrupt PID_Interrupt 
+                                MotorR_DriveTimer_Interrupt MotorL_DriveTimer_Interrupt 
+                                MotorR_DutyTimer_Interrupt MotorL_DutyTimer_Interrupt _EntryPoint 
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |  | 
+ |  +- PE_low_level_init   
+ |  |  | 
+ |  |  +- Sensor_Init         
+ |  |  |    
+ |  |  +- MotorL_DriveTimer_Init
+ |  |  |    
+ |  |  +- MotorR_DriveTimer_Init
+ |  |       
+ |  +- Cpu_Delay100US      
+ |  |    
+ |  +- InitializeLCD       
+ |  |  | 
+ |  |  +- Cpu_Delay100US       (see above)
+ |  |  |  
+ |  |  +- writeCom            
+ |  |     | 
+ |  |     +- LCD_RS_PutVal       
+ |  |     |    
+ |  |     +- LCD_EN_PutVal       
+ |  |     |    
+ |  |     +- MotorRDrive_LCD_DB_PutVal
+ |  |     |    
+ |  |     +- Cpu_Delay100US       (see above)
+ |  |        
+ |  +- solveMaze           
+ |     | 
+ |     +- pollSensors         
+ |     |  | 
+ |     |  +- Sensor_Measure      
+ |     |  |    
+ |     |  +- Sensor_GetValue8    
+ |     |       
+ |     +- Cpu_Delay100US       (see above)
+ |     |  
+ |     +- Left                
+ |     |  | 
+ |     |  +- powerMotors         
+ |     |     | 
+ |     |     +- MotorR_EN_PutVal    
+ |     |     |    
+ |     |     +- MotorL_EN_PutVal    
+ |     |     |    
+ |     |     +- Cpu_Delay100US       (see above)
+ |     |        
+ |     +- Turn                
+ |     |  | 
+ |     |  +- powerMotors          (see above)
+ |     |     
+ |     +- Right               
+ |     |  | 
+ |     |  +- powerMotors          (see above)
+ |     |     
+ |     +- Forward             
+ |        | 
+ |        +- powerMotors          (see above)
+ |           
+ +- _EntryPoint         
+    | 
+    +- _Startup            
+       | 
+       +- Init                
+       |    
+       +- main                 (see above)
+          
+ _InterruptVectorTable
+ | 
+ +- Cpu_Interrupt       
+ |    
+ +- Sensor_Interrupt    
+ |  | 
+ |  +- Sensor_OnEnd        
+ |       
+ +- PID_Interrupt       
+ |  | 
+ |  +- PID_OnInterrupt     
+ |     | 
+ |     +- abs                 
+ |     |    
+ |     +- MotorR_DriveTimer_SetPeriodUS
+ |     |  | 
+ |     |  +- PE_Timer_LngMul     
+ |     |  |    
+ |     |  +- PE_Timer_LngHi4     
+ |     |       
+ |     +- MotorL_DriveTimer_SetPeriodUS
+ |        | 
+ |        +- PE_Timer_LngMul      (see above)
+ |        |  
+ |        +- PE_Timer_LngHi4      (see above)
+ |           
+ +- MotorR_DriveTimer_Interrupt
+ |  | 
+ |  +- MotorR_DriveTimer_OnInterrupt
+ |       
+ +- MotorL_DriveTimer_Interrupt
+ |  | 
+ |  +- MotorL_DriveTimer_OnInterrupt
+ |       
+ +- MotorR_DutyTimer_Interrupt
+ |  | 
+ |  +- MotorR_DutyTimer_OnInterrupt
+ |     | 
+ |     +- MotorR_WriteBits    
+ |        | 
+ |        +- MotorRDrive_LCD_DB_PutVal (see above)
+ |           
+ +- MotorL_DutyTimer_Interrupt
+ |  | 
+ |  +- MotorL_DutyTimer_OnInterrupt
+ |     | 
+ |     +- MotorL_WriteBits    
+ |        | 
+ |        +- MotorLDrive_1_PutVal
+ |        |    
+ |        +- MotorLDrive_2_PutVal
+ |        |    
+ |        +- MotorLDrive_4_PutVal
+ |        |    
+ |        +- MotorLDrive_8_PutVal
+ |             
+ +- _EntryPoint          (see above)
+    
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 19
+Total size of all blocks to be downloaded: 2997
+
