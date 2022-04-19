@@ -902,15 +902,11 @@ void solveMaze()
             else
             {
                 //왼쪽과 앞에 벽이라면오른쪽으로 회전
-                if (sensors[0] > 80 && sensors[1] > 90)
-                    Right();
+                if (sensors[0] > 80 && sensors[1] > 90) Right();
                 //왼쪽과 오른쪽이 벽 -> 회전할 필요 x
-                else if (sensors[0] > 80 && sensors[2] > 80)
-                {
-                }
+                else if (sensors[0] > 80 && sensors[2] > 80){}
                 //앞쪽과 오른쪽이 벽 -> 왼쪽으로 회전
-                else if (sensors[1] > 90 && sensors[2] > 80)
-                    Left();
+                else if (sensors[1] > 90 && sensors[2] > 80) Left();
                 //벽이 한쪽밖에 없거나 아예없으면 벽이 없는쪽 아무대나 괜찮다
                 else
                 {
@@ -918,21 +914,11 @@ void solveMaze()
                     int i;
                     for (i = 0; i < 3; i++)
                     {
-                        if (sensors[i] > 80)
-                            break;
+                        if (sensors[i] > 80)break;
                     }
-                    if (i == 1)
-                    {
-                        Left();
-                    }
-                    else if (i == 2)
-                    {
-                        continue; //방향전환 필요 없음
-                    }
-                    else
-                    {
-                        Right();
-                    }
+                    if (i == 1)Left();
+                    else if (i == 2){}
+                    else Right();
                 }
                 // mouseX와 mouseY의 위치에 1을 더했다 (왔다갔다는 뜻)
                 map[mouseX][mouseY]++;
@@ -948,7 +934,7 @@ void solveMaze()
 
 ### Why Did I make Improvements ?
 
-1. COL : 308 Lines -> 75 Lines
+1. COL : 308 Lines -> 69 Lines
 2. 3 Arrays (heading[4], map[6][13][4], mazeDist[6][13]) -> 3 Arrays(dx[4],dy[4],map[6][13])
 
 Instead of saving headings, directions encountered in map, and distance map,
